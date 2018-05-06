@@ -26,6 +26,7 @@ def cassandra_insert(registers):
 		print ("End time = "+ time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)));
 		print ("Total time: "+ str(end-start) + " seconds.");
 		cluster.shutdown()
+		return (end-start)
 	except:
 		print("Cassandra: Erro na query");
 		pass

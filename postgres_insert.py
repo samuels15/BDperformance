@@ -5,11 +5,11 @@ import time
 
 def pg_insert(registers):
 	try:
-	    conn=psycopg2.connect(	dbname='pibic', 		\
+	    conn=psycopg2.connect(	dbname='tg1', 		\
 	    						host='localhost', 	\
 	    						port='5432', 		\
 	    						user='postgres', 	\
-	    						password='7323')
+	    						password='200695')
 	except:
 		print("Erro 0: Impossivel conectar com o Postgre.\n")
 		sys.exit(0)

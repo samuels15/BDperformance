@@ -1,7 +1,7 @@
 import csv
 from wales_water import WalesWater
 
-def load_wales():
+def load_wales(dataSetSize):
 	i=0
 	waterWales=[]
 	with open("data/WalesWater.csv", "r") as csvfile:
@@ -10,7 +10,7 @@ def load_wales():
 		for row in file:
 			# print i
 			# print waterWales[i];
-			if i >= 5000:
+			if i >= dataSetSize:
 				break
 			waterWales.append(WalesWater(row))
 			i+=1

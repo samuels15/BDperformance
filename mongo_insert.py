@@ -14,18 +14,16 @@ def mongo_insert(registers):
 		print "Erro na conexao com o MongoDB";
 		sys.exit(0)
 
-	#try:
-	# conn.delete_series(database='tg1', measurement='temperature')
-	start = time.time()
-	print("Start time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start)))
-	# temperature.insert_one(mkjson_object(register));
-	for item in registers:
-		temperature.insert_one(mkjson_object(item));
-		# print mkjson_object(item);
-	end = time.time()
-	print("End time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)))
-	print("Total time: " + str(end-start) + " seconds.")
-	return end-start
-	#except:
-	#	print("MongoDB: Erro na query");
-	#	pass
+	try:
+		start = time.time()
+		print("Start time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start)))
+		for item in registers:
+			temperature.insert_one(mkjson_object(item));
+			# print mkjson_object(item);
+		end = time.time()
+		print("End time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)))
+		print("Total time: " + str(end-start) + " seconds.")
+		return end-start
+	except:
+		print("MongoDB: Erro na query");
+		pass
