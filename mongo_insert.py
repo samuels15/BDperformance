@@ -20,7 +20,7 @@ def mongo_insert(registers):
 	print("Start time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start)))
 	# temperature.insert_one(mkjson_object(register));
 	for item in registers:
-		temperature.insert_many(mkjson_object(item));
+		temperature.insert_one(mkjson_object(item));
 		# print mkjson_object(item);
 	end = time.time()
 	print("End time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)))

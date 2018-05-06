@@ -10,7 +10,7 @@ def load_wales():
 		for row in file:
 			# print i
 			# print waterWales[i];
-			if i >= 50000:
+			if i >= 5000:
 				break
 			waterWales.append(WalesWater(row))
 			i+=1

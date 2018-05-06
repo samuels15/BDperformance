@@ -22,7 +22,7 @@ def influx_insert(registers):
 		#	conn.write_points(mkjson_object(registers[0]))
 		#	registers.remove(registers[0])
 		for item in registers:
-			conn.write_points(mkjson_object(item));
+			conn.write_points([mkjson_object(item)]);
 		end = time.time()
 		print("End time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)))
 		print("Total time: " + str(end-start) + " seconds.")
