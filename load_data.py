@@ -8,11 +8,11 @@ def load_wales():
 		file = csv.reader(csvfile, delimiter=';',quotechar='"')
 		# next (file)	# skip header
 		for row in file:
-			waterWales.append(WalesWater(row))
 			# print i
 			# print waterWales[i];
-			if i >= 500000:
+			if i >= 50000:
 				break
+			waterWales.append(WalesWater(row))
 			i+=1
 		csvfile.close();
 	print("Numero de registros: " + str(i))
