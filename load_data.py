@@ -11,7 +11,7 @@ def load_wales():
 			waterWales.append(WalesWater(row))
 			# print i
 			# print waterWales[i];
-			if i >= 50000:
+			if i >= 500000:
 				break
 			i+=1
 		csvfile.close();

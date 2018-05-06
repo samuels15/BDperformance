@@ -14,24 +14,24 @@ def main():
 						+'\n2. InfluxDB'
 						+'\n3. Cassandra'
 						+'\nq. Cancelar e sair.')
-	if (opt=='1'):
+	if (str(opt)=='1'):
 		print ("Testando PostgreSQL...")
 		for i in range(10):
 			print ("\n" + "Teste no. "+str(i+1))
 			avg.append(pg_insert(waterWales))
-	elif (opt=='2'):
+	elif (str(opt)=='2'):
 		print ("Testando InfluxDB...")
 		#for register in waterWales:
 		#	print register
 		#	print '\n'
 		avg.append(influx_insert(waterWales))
-	elif (opt=='3'):
+	elif (str(opt)=='3'):
 		print ("Testando Cassandra...");
-		cassandra_insert(waterWales[0]);
+		cassandra_insert(waterWales);
 	elif (opt=='') or (opt=='q'):
 		pass
 	else:
-		print ("Opcao invalida.")
+		print ("Opcao "+str(opt)+" invalida.")
 
 avg = []
 main()
