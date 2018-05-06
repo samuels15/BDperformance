@@ -2,6 +2,7 @@ import sys
 from load_data import load_wales
 from postgres_insert import pg_insert
 from influxdb_insert import influx_insert
+from cassandra_insert import cassandra_insert
 
 def main():
 	waterWales = load_wales()
@@ -11,6 +12,7 @@ def main():
 		opt = input('Which database do you want to test?'
 						+'\n1. PostgreSQL'
 						+'\n2. InfluxDB'
+						+'\n3. Cassandra'
 						+'\nq. Cancelar e sair.')
 	if (opt=='1'):
 		print ("Testando PostgreSQL...")
@@ -23,6 +25,9 @@ def main():
 		#	print register
 		#	print '\n'
 		avg.append(influx_insert(waterWales))
+	elif (opt=='3'):
+		print ("Testando Cassandra...");
+		cassandra_insert(waterWales[0]);
 	elif (opt=='') or (opt=='q'):
 		pass
 	else:
