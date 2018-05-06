@@ -28,7 +28,7 @@ class WalesWater:
 		self.sampleID 		+"','"+ \
 		self.sampleComment	+"','"+ \
 		self.sampleFlag		+"','"+ \
-		self.timeTag.strftime("%d/%m/%y %H:%M:%S") +"'"
+		self.timeTag.strftime("%Y-%m-%dT%H:%M:%SZ") +"'"
 
 	def __str__(self):		# define como os dados dessa classe sao printados
 		return "TimeTag: " + self.timeTag.strftime("%d/%m/%y %H:%M:%S") + "\n" +\
