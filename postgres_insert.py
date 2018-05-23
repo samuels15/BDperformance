@@ -2,6 +2,8 @@ import sys
 import psycopg2
 from datetime import datetime
 import time
+# import monitor
+# import commands, psutil # Para monitorar memoria e CPU
 
 def pg_insert(registers):
 	try:
@@ -15,19 +17,20 @@ def pg_insert(registers):
 		sys.exit(0)
 
 	cur = conn.cursor()
+	# cpu_array=[];
 	try:
 		query = "TRUNCATE TABLE walesTemperature"
 		# print query
 		cur.execute(query)
 		conn.commit()
-		start = time.time()
+		start = time.time()  
 		print("Start time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start)))
 		for item in registers:
 			query = "INSERT INTO public.walesTemperature (id, siteID, sampleDate, sampleTime, detCode,"+\
 				"detResult, sourceCode, sampleID, sampleComment,sampleFlag, timeTag) " +\
 				"VALUES ("+repr(item)+");";
-			#print str(i) + '\t' + query + '\n'
 			cur.execute(query)
+			# cpu_array.append(monitor.get_cpu_usage("postgres"))
 		conn.commit()
 		end = time.time()
 		print("End time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)))
