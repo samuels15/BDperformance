@@ -1,6 +1,6 @@
 import sys
 from load_data import load_wales
-from postgres_insert import pg_insert
+from postgres_insert import pg_insert, retorno as avg_pg
 from influxdb_insert import influx_insert
 from cassandra_insert import cassandra_insert
 from mongo_insert import mongo_insert
@@ -24,6 +24,8 @@ def main():
 		print ("Testando PostgreSQL...");
 		for i in range(2):
 			print ("\n" + "Teste no. "+str(i+1));
+			# pg_insert(waterWales);
+			# avg=avg_pg;
 			avg.append(pg_insert(waterWales));
 	elif (str(opt)=='2'):
 		print ("Testando InfluxDB...");

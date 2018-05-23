@@ -37,6 +37,7 @@ def pg_insert(registers):
 		print("Total time: " + str(end-start) + " seconds.")
 		cur.close()
 		conn.close()
+		# retorno.append(end-start)
 		return end-start
 	except IndexError:
 		print("Erro 3: Postgre acusou erro na query de inserir a temperatura da agua em Wales.\n\n")
@@ -44,3 +45,4 @@ def pg_insert(registers):
 		cur.close()
 		conn.close()
 		sys.exit(1)
+retorno = [];
