@@ -1,9 +1,9 @@
 import sys
 from load_data import load_wales
-from postgres_insert import pg_insert, retorno as avg_pg
-from influxdb_insert import influx_insert
-from cassandra_insert import cassandra_insert
-from mongo_insert import mongo_insert
+from postgres_insert import pg_insert, retorno as avg_pstg
+from influxdb_insert import influx_insert, retorno as avg_iflx
+from cassandra_insert import cassandra_insert, retorno as avg_cass
+from mongo_insert import mongo_insert, retorno as avg_mong
 
 def main():
 	dataSetSize = 100000;
@@ -18,31 +18,36 @@ def main():
 						+'\n2. InfluxDB'
 						+'\n3. Cassandra'
 						+'\n4. MongoDB'
-						+'\nq. Cancelar e sair.\n')
+						+'\n0. Cancelar e sair.\n')
 	waterWales = load_wales(dataSetSize);
 	if (str(opt)=='1'):
 		print ("Testando PostgreSQL...");
 		for i in range(2):
 			print ("\n" + "Teste no. "+str(i+1));
-			# pg_insert(waterWales);
-			# avg=avg_pg;
-			avg.append(pg_insert(waterWales));
+			pg_insert(waterWales);
+			avg=avg_pstg;
+			# avg.append(pg_insert(waterWales));
 	elif (str(opt)=='2'):
 		print ("Testando InfluxDB...");
 		for i in range(2):
 			print ("\n"+"Teste no. "+str(i+1));
-			avg.append(influx_insert(waterWales));
+			influx_insert(waterWales);
+			avg=avg_iflx;
+			# avg.append(influx_insert(waterWales));
 	elif (str(opt)=='3'):
 		print ("Testando Cassandra...");
 		for i in range(2):
 			print ("\n"+"Teste no. "+str(i+1));
-			avg.append(cassandra_insert(waterWales));
+			cassandra_insert(waterWales);
+			avg=avg_cass;
 	elif (str(opt)=='4'):
 		print ("Testando MongoDB...");
 		for i in range(2):
 			print ("\n"+"Teste no. "+str(i+1));
-			avg.append(mongo_insert(waterWales));
-	elif (opt=='') or (opt=='q'):
+			mongo_insert(waterWales);
+			avg = avg_mong;
+			#avg.append(mongo_insert(waterWales));
+	elif (str(opt)=='0'):
 		pass
 	else:
 		print ("Opcao "+str(opt)+" invalida.")
@@ -50,4 +55,5 @@ def main():
 avg = []
 main()
 if avg:
-	print ("Media do tempo: " + str(sum(avg)/len(avg)) + " segundos.")
+	print ("Media do tempo: " + str(sum(avg)/len(avg)) + " segundos.");
+	print("Media postgres_insert: "+ str(sum(avg_pg)/len(avg_pg))+" segundos.");

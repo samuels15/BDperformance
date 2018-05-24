@@ -25,9 +25,11 @@ def mongo_insert(registers):
 		print("End time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)))
 		print("Total time: " + str(end-start) + " seconds.")
 		print("Average memory used: "+str(sum(mem_array)/len(mem_array))+"KiB.");
+		retorno.append(end-start)
 		return end-start
 	except:
 		print("MongoDB: Erro na query");
 		pass
 #	print mem_array;
 #	return end-start
+retorno = [];
