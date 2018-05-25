@@ -4,6 +4,8 @@ from postgres_insert import pg_insert, retorno as avg_pstg
 from influxdb_insert import influx_insert, retorno as avg_iflx
 from cassandra_insert import cassandra_insert, retorno as avg_cass
 from mongo_insert import mongo_insert, retorno as avg_mong
+from monitor import monitor_memory, mem
+import threading
 
 def main():
 	dataSetSize = 100000;
@@ -24,7 +26,21 @@ def main():
 		print ("Testando PostgreSQL...");
 		for i in range(2):
 			print ("\n" + "Teste no. "+str(i+1));
-			pg_insert(waterWales);
+			try:
+				t1=threading.Thread(target=pg_insert, args=([waterWales]));
+				#t2=threading.Thread(target=monitor_memory, args=(["postgres"]))
+				t1.start();
+				#t2.start();
+				while t1.isAlive():
+					pass;
+				# t2.do_run = False;
+				# t2.join();
+				print ('Thread executed');
+				#if (mem):
+				#	print ("Media de memoria:" + str(sum(mem)/len(mem))+"KiB.")
+				#	print ("Maximo de memoria:"+ max(mem)+"KiB.");
+			except:
+				pg_insert(waterWales);
 			avg=avg_pstg;
 			# avg.append(pg_insert(waterWales));
 	elif (str(opt)=='2'):

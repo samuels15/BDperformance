@@ -3,7 +3,7 @@ from datetime import datetime
 from make_json import mkjson_object
 import time
 import sys
-import monitor
+# import monitor
 
 def influx_insert(registers):
 	try:
@@ -20,14 +20,14 @@ def influx_insert(registers):
 		#i=0;
 		for item in registers:
 			conn.write_points([mkjson_object(item)]);
-			mem_array.append(monitor.get_memory_usage("influxdb"));
+			# mem_array.append(monitor.get_memory_usage("influxdb"));
 			#i+=1
 			#if (i%100==0):
 			#	print ("Processados %d registros" %i);
 		end = time.time()
 		print("End time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)))
 		print("Total time: " + str(end-start) + " seconds.")
-		print("Average memory used: "+str(sum(mem_array)/len(mem_array))+"KiB.");
+#		print("Average memory used: "+str(sum(mem_array)/len(mem_array))+"KiB.");
 		retorno.append(end-start)
 		return end-start
 	except:
