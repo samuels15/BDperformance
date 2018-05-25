@@ -39,15 +39,17 @@ def get_memory_usage(name):
 def get_cpu_usage(name):
 	try:
 		process = psutil.Process(getpid(name));
-		return (process.cpu_percent());
+		return (process.cpu_percent(interval=0.1));
 	except:
 		return 0;
 
-def monitor_memory(name):
+def monitor(name):
 	t = threading.currentThread();
 	while getattr(t, "do_run", True):
 		mem.append(get_memory_usage(name));
+		cpu.append(get_cpu_usage(name))
 		# now = time.time();
 	# print (i);
 
+cpu=[]
 mem=[]

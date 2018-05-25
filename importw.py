@@ -4,7 +4,7 @@ from postgres_insert import pg_insert, retorno as avg_pstg
 from influxdb_insert import influx_insert, retorno as avg_iflx
 from cassandra_insert import cassandra_insert, retorno as avg_cass
 from mongo_insert import mongo_insert, retorno as avg_mong
-from monitor import monitor_memory, mem
+from monitor import monitor, mem, cpu
 import threading
 
 def main():
@@ -28,7 +28,7 @@ def main():
 			print ("\n" + "Teste no. "+str(i+1));
 			try:
 				t1=threading.Thread(target=pg_insert, args=([waterWales]));
-				t2=threading.Thread(target=monitor_memory, args=(["postgres"]))
+				t2=threading.Thread(target=monitor, args=(["postgres"]))
 				t1.start();
 				t2.start();
 				while t1.isAlive():
@@ -38,20 +38,30 @@ def main():
 					pass;
 				# print ('Thread executed');
 				if (mem):
-					print ("Media de memoria:" + str(sum(mem)/len(mem))+"KiB.");
+					mem_avg.append(sum(mem)/len(mem))
+					print ("Media de memoria: %.0f KiB" % (sum(mem)/len(mem)));
+					del mem[:];	# limpando as aquisicoes dessa repeticao
+				if (cpu):
+					cpu_avg.append(sum(cpu)/len(cpu))
+					print ("Uso medio da CPU: %.4f%%" % (sum(cpu)/len(cpu)));
+					del cpu[:];	# limpando as aquisicoes dessa repeticao
 			except:
 				print ("Erro no threading");
-				# pg_insert(waterWales);
+		print ('\n');
+		if(avg_pstg):
+			print ("Media global do tempo: %.4f segundos" % (sum(avg_pstg)/len(avg_pstg)));
+		if mem_avg:
+			print ("Media global do uso de memoria: %.0f" % (sum(mem_avg)/len(mem_avg)));
+		if cpu_avg:
+			print ("Media global do uso de CPU: %.4f%%"   % (sum(cpu_avg)/len(cpu_avg)));
 
-			avg=avg_pstg;
-			# avg.append(pg_insert(waterWales));
 	elif (str(opt)=='2'):
 		print ("Testando InfluxDB...");
 		for i in range(2):
 			print ("\n"+"Teste no. "+str(i+1));
 			try:
 				t1=threading.Thread(target=influx_insert, args=([waterWales]));
-				t2=threading.Thread(target=monitor_memory, args=(["influxdb"]))
+				t2=threading.Thread(target=monitor, args=(["influxdb"]))
 				t1.start();
 				t2.start();
 				while t1.isAlive():
@@ -64,16 +74,20 @@ def main():
 					print ("Media de memoria:" + str(sum(mem)/len(mem))+"KiB.")
 			except:
 				print("Erro no threading");
-				# influx_insert(waterWales);
-			avg=avg_iflx;
-			# avg.append(influx_insert(waterWales));
+		print ('\n');
+		if(avg_iflx):
+			print ("Media global do tempo: %.4f segundos" % (sum(avg_iflx)/len(avg_iflx)));
+		if mem_avg:
+			print ("Media global do uso de memoria: %.0f" % (sum(mem_avg)/len(mem_avg)));
+		if cpu_avg:
+			print ("Media global do uso de CPU: %.4f%%"   % (sum(cpu_avg)/len(cpu_avg)));
 	elif (str(opt)=='3'):
 		print ("Testando Cassandra...");
 		for i in range(2):
 			print ("\n"+"Teste no. "+str(i+1));
 			try:
 				t1=threading.Thread(target=cassandra_insert, args=([waterWales]));
-				t2=threading.Thread(target=monitor_memory, args=(["cassandra"]))
+				t2=threading.Thread(target=monitor, args=(["cassandra"]))
 				t1.start();
 				t2.start();
 				while t1.isAlive():
@@ -86,15 +100,20 @@ def main():
 					print ("Media de memoria:" + str(sum(mem)/len(mem))+"KiB.")
 			except:
 				print("Erro no threading");
-				# cassandra_insert(waterWales);
-			avg=avg_cass;
+		print ('\n');
+		if(avg_cass):
+			print ("Media global do tempo: %.4f segundos" % (sum(avg_cass)/len(avg_cass)));
+		if mem_avg:
+			print ("Media global do uso de memoria: %.0f" % (sum(mem_avg)/len(mem_avg)));
+		if cpu_avg:
+			print ("Media global do uso de CPU: %.4f%%"   % (sum(cpu_avg)/len(cpu_avg)));
 	elif (str(opt)=='4'):
 		print ("Testando MongoDB...");
 		for i in range(2):
 			print ("\n"+"Teste no. "+str(i+1));
 			try:
 				t1=threading.Thread(target=mongo_insert, args=([waterWales]));
-				t2=threading.Thread(target=monitor_memory, args=(["mongodb"]))
+				t2=threading.Thread(target=monitor, args=(["mongodb"]))
 				t1.start();
 				t2.start();
 				while t1.isAlive():
@@ -108,16 +127,18 @@ def main():
 
 			except:
 				print ("Erro no threading")
-				# mongo_insert(waterWales);
-			avg = avg_mong;
-			#avg.append(mongo_insert(waterWales));
+		print ('\n');
+		if(avg_mong):
+			print ("Media global do tempo: %.4f segundos" % (sum(avg_mong)/len(avg_mong)));
+		if mem_avg:
+			print ("Media global do uso de memoria: %.0f" % (sum(mem_avg)/len(mem_avg)));
+		if cpu_avg:
+			print ("Media global do uso de CPU: %.4f%%"   % (sum(cpu_avg)/len(cpu_avg)));
 	elif (str(opt)=='0'):
 		pass
 	else:
 		print ("Opcao "+str(opt)+" invalida.")
 
-avg = []
+mem_avg = []
+cpu_avg = []
 main()
-if avg:
-	print ("Media do tempo: " + str(sum(avg)/len(avg)) + " segundos.");
-	print("Media postgres_insert: "+ str(sum(avg_pg)/len(avg_pg))+" segundos.");

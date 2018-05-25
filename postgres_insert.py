@@ -20,7 +20,7 @@ def pg_insert(registers):
 		# print query
 		cur.execute(query)
 		conn.commit()
-		start = time.time()  
+		start = time.time()
 		print("Start time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start)))
 		for item in registers:
 			query = "INSERT INTO public.walesTemperature (id, siteID, sampleDate, sampleTime, detCode,"+\
