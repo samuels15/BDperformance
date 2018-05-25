@@ -24,7 +24,7 @@ def main():
 	waterWales = load_wales(dataSetSize);
 	if (str(opt)=='1'):
 		print ("Testando PostgreSQL...");
-		for i in range(1): #Com threads, nao pode ter esse loop aqui, ele tera que ser repensado.
+		for i in range(2):
 			print ("\n" + "Teste no. "+str(i+1));
 			try:
 				t1=threading.Thread(target=pg_insert, args=([waterWales]));
@@ -33,37 +33,82 @@ def main():
 				t2.start();
 				while t1.isAlive():
 					pass;
-
 				t2.do_run = False;
-
 				while t2.isAlive():
 					pass;
-				print ('Thread executed');
+				# print ('Thread executed');
 				if (mem):
-					print ("Media de memoria:" + str(sum(mem)/len(mem))+"KiB.")
-					print ("Maximo de memoria:"+ max(mem)+"KiB.");
+					print ("Media de memoria:" + str(sum(mem)/len(mem))+"KiB.");
 			except:
-				pg_insert(waterWales);
+				print ("Erro no threading");
+				# pg_insert(waterWales);
+
 			avg=avg_pstg;
 			# avg.append(pg_insert(waterWales));
 	elif (str(opt)=='2'):
 		print ("Testando InfluxDB...");
 		for i in range(2):
 			print ("\n"+"Teste no. "+str(i+1));
-			influx_insert(waterWales);
+			try:
+				t1=threading.Thread(target=influx_insert, args=([waterWales]));
+				t2=threading.Thread(target=monitor_memory, args=(["influxdb"]))
+				t1.start();
+				t2.start();
+				while t1.isAlive():
+					pass;
+				t2.do_run = False;
+				while t2.isAlive():
+					pass;
+				# print ('Thread executed');
+				if (mem):
+					print ("Media de memoria:" + str(sum(mem)/len(mem))+"KiB.")
+			except:
+				print("Erro no threading");
+				# influx_insert(waterWales);
 			avg=avg_iflx;
 			# avg.append(influx_insert(waterWales));
 	elif (str(opt)=='3'):
 		print ("Testando Cassandra...");
 		for i in range(2):
 			print ("\n"+"Teste no. "+str(i+1));
-			cassandra_insert(waterWales);
+			try:
+				t1=threading.Thread(target=cassandra_insert, args=([waterWales]));
+				t2=threading.Thread(target=monitor_memory, args=(["cassandra"]))
+				t1.start();
+				t2.start();
+				while t1.isAlive():
+					pass;
+				t2.do_run = False;
+				while t2.isAlive():
+					pass;
+				#print ('Thread executed');
+				if (mem):
+					print ("Media de memoria:" + str(sum(mem)/len(mem))+"KiB.")
+			except:
+				print("Erro no threading");
+				# cassandra_insert(waterWales);
 			avg=avg_cass;
 	elif (str(opt)=='4'):
 		print ("Testando MongoDB...");
 		for i in range(2):
 			print ("\n"+"Teste no. "+str(i+1));
-			mongo_insert(waterWales);
+			try:
+				t1=threading.Thread(target=mongo_insert, args=([waterWales]));
+				t2=threading.Thread(target=monitor_memory, args=(["mongodb"]))
+				t1.start();
+				t2.start();
+				while t1.isAlive():
+					pass;
+				t2.do_run = False;
+				while t2.isAlive():
+					pass;
+				#print ('Thread executed');
+				if (mem):
+					print ("Media de memoria:" + str(sum(mem)/len(mem))+"KiB.")
+
+			except:
+				print ("Erro no threading")
+				# mongo_insert(waterWales);
 			avg = avg_mong;
 			#avg.append(mongo_insert(waterWales));
 	elif (str(opt)=='0'):
