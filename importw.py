@@ -24,21 +24,24 @@ def main():
 	waterWales = load_wales(dataSetSize);
 	if (str(opt)=='1'):
 		print ("Testando PostgreSQL...");
-		for i in range(2):
+		for i in range(1): #Com threads, nao pode ter esse loop aqui, ele tera que ser repensado.
 			print ("\n" + "Teste no. "+str(i+1));
 			try:
 				t1=threading.Thread(target=pg_insert, args=([waterWales]));
-				#t2=threading.Thread(target=monitor_memory, args=(["postgres"]))
+				t2=threading.Thread(target=monitor_memory, args=(["postgres"]))
 				t1.start();
-				#t2.start();
+				t2.start();
 				while t1.isAlive():
 					pass;
-				# t2.do_run = False;
-				# t2.join();
+
+				t2.do_run = False;
+
+				while t2.isAlive():
+					pass;
 				print ('Thread executed');
-				#if (mem):
-				#	print ("Media de memoria:" + str(sum(mem)/len(mem))+"KiB.")
-				#	print ("Maximo de memoria:"+ max(mem)+"KiB.");
+				if (mem):
+					print ("Media de memoria:" + str(sum(mem)/len(mem))+"KiB.")
+					print ("Maximo de memoria:"+ max(mem)+"KiB.");
 			except:
 				pg_insert(waterWales);
 			avg=avg_pstg;
