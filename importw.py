@@ -12,8 +12,8 @@ def main():
 	if (len(sys.argv)==2):
 		opt = sys.argv[1]
 	elif(len(sys.argv)==3):
-		opt = sys.argv[1];
-		dataSetSize = int(sys.argv[2]);
+		opt = sys.argv[2];
+		dataSetSize = int(sys.argv[1]);
 	else:
 		opt = input('Which database do you want to test?'
 						+'\n1. PostgreSQL'
@@ -71,7 +71,13 @@ def main():
 					pass;
 				# print ('Thread executed');
 				if (mem):
-					print ("Media de memoria:" + str(sum(mem)/len(mem))+"KiB.")
+					mem_avg.append(sum(mem)/len(mem))
+					print ("Media de memoria: %.0f KiB" % (sum(mem)/len(mem)));
+					del mem[:];	# limpando as aquisicoes dessa repeticao
+				if (cpu):
+					cpu_avg.append(sum(cpu)/len(cpu))
+					print ("Uso medio da CPU: %.4f%%" % (sum(cpu)/len(cpu)));
+					del cpu[:];	# limpando as aquisicoes dessa repeticao
 			except:
 				print("Erro no threading");
 		print ('\n');
@@ -97,7 +103,13 @@ def main():
 					pass;
 				#print ('Thread executed');
 				if (mem):
-					print ("Media de memoria:" + str(sum(mem)/len(mem))+"KiB.")
+					mem_avg.append(sum(mem)/len(mem))
+					print ("Media de memoria: %.0f KiB" % (sum(mem)/len(mem)));
+					del mem[:];	# limpando as aquisicoes dessa repeticao
+				if (cpu):
+					cpu_avg.append(sum(cpu)/len(cpu))
+					print ("Uso medio da CPU: %.4f%%" % (sum(cpu)/len(cpu)));
+					del cpu[:];	# limpando as aquisicoes dessa repeticao
 			except:
 				print("Erro no threading");
 		print ('\n');
@@ -123,8 +135,13 @@ def main():
 					pass;
 				#print ('Thread executed');
 				if (mem):
-					print ("Media de memoria:" + str(sum(mem)/len(mem))+"KiB.")
-
+					mem_avg.append(sum(mem)/len(mem))
+					print ("Media de memoria: %.0f KiB" % (sum(mem)/len(mem)));
+					del mem[:];	# limpando as aquisicoes dessa repeticao
+				if (cpu):
+					cpu_avg.append(sum(cpu)/len(cpu))
+					print ("Uso medio da CPU: %.4f%%" % (sum(cpu)/len(cpu)));
+					del cpu[:];	# limpando as aquisicoes dessa repeticao
 			except:
 				print ("Erro no threading")
 		print ('\n');
