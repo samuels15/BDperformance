@@ -24,7 +24,7 @@ def main():
 	waterWales = load_wales(dataSetSize);
 	if (str(opt)=='1'):
 		print ("Testando PostgreSQL...");
-		for i in range(2):
+		for i in range(5):
 			print ("\n" + "Teste no. "+str(i+1));
 			try:
 				t1=threading.Thread(target=pg_insert, args=([waterWales]));
@@ -37,6 +37,8 @@ def main():
 				while t2.isAlive():
 					pass;
 				# print ('Thread executed');
+				if (avg_pstg):
+					print ("Tempo da insercao: %.4f segundos" % avg_pstg[-1]);
 				if (mem):
 					mem_avg.append(sum(mem)/len(mem))
 					print ("Media de memoria: %.0f KiB" % (sum(mem)/len(mem)));
@@ -57,7 +59,7 @@ def main():
 
 	elif (str(opt)=='2'):
 		print ("Testando InfluxDB...");
-		for i in range(2):
+		for i in range(5):
 			print ("\n"+"Teste no. "+str(i+1));
 			try:
 				t1=threading.Thread(target=influx_insert, args=([waterWales]));
@@ -70,6 +72,8 @@ def main():
 				while t2.isAlive():
 					pass;
 				# print ('Thread executed');
+				if (avg_iflx):
+					print ("Tempo da insercao: %.4f segundos" % avg_iflx[-1]);
 				if (mem):
 					mem_avg.append(sum(mem)/len(mem))
 					print ("Media de memoria: %.0f KiB" % (sum(mem)/len(mem)));
@@ -89,7 +93,7 @@ def main():
 			print ("Media global do uso de CPU: %.4f%%"   % (sum(cpu_avg)/len(cpu_avg)));
 	elif (str(opt)=='3'):
 		print ("Testando Cassandra...");
-		for i in range(2):
+		for i in range(5):
 			print ("\n"+"Teste no. "+str(i+1));
 			try:
 				t1=threading.Thread(target=cassandra_insert, args=([waterWales]));
@@ -102,6 +106,8 @@ def main():
 				while t2.isAlive():
 					pass;
 				#print ('Thread executed');
+				if (avg_cass):
+					print ("Tempo da insercao: %.4f segundos" % avg_cass[-1]);
 				if (mem):
 					mem_avg.append(sum(mem)/len(mem))
 					print ("Media de memoria: %.0f KiB" % (sum(mem)/len(mem)));
@@ -121,7 +127,7 @@ def main():
 			print ("Media global do uso de CPU: %.4f%%"   % (sum(cpu_avg)/len(cpu_avg)));
 	elif (str(opt)=='4'):
 		print ("Testando MongoDB...");
-		for i in range(2):
+		for i in range(5):
 			print ("\n"+"Teste no. "+str(i+1));
 			try:
 				t1=threading.Thread(target=mongo_insert, args=([waterWales]));
@@ -134,6 +140,8 @@ def main():
 				while t2.isAlive():
 					pass;
 				#print ('Thread executed');
+				if (avg_mong):
+					print ("Tempo da insercao: %.4f segundos" % avg_mong[-1]);
 				if (mem):
 					mem_avg.append(sum(mem)/len(mem))
 					print ("Media de memoria: %.0f KiB" % (sum(mem)/len(mem)));

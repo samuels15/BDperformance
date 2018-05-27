@@ -21,7 +21,7 @@ def pg_insert(registers):
 		cur.execute(query)
 		conn.commit()
 		start = time.time()
-		print("Start time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start)))
+		# print("Start time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start)))
 		for item in registers:
 			query = "INSERT INTO public.walesTemperature (id, siteID, sampleDate, sampleTime, detCode,"+\
 				"detResult, sourceCode, sampleID, sampleComment,sampleFlag, timeTag) " +\
@@ -29,8 +29,8 @@ def pg_insert(registers):
 			cur.execute(query)
 		conn.commit()
 		end = time.time()
-		print("End time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)))
-		print("Total time: " + str(end-start) + " seconds.")
+		# print("End time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)))
+		# print("Total time: " + str(end-start) + " seconds.")
 		cur.close()
 		conn.close()
 		retorno.append(end-start)

@@ -15,7 +15,7 @@ def cassandra_insert(registers):
 
 	try:
 		start = time.time();
-		print ("Start time = "+ time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start))) 
+		# print ("Start time = "+ time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start))) 
 		for item in registers:
 			query = "INSERT INTO temperature (id, siteID, sampleDate, sampleTime, detCode,"+\
 				"detResult, sourceCode, sampleID, sampleComment, sampleFlag, timeTag) "+\
@@ -23,8 +23,8 @@ def cassandra_insert(registers):
 			#print query;
 			session.execute(query);
 		end = time.time();
-		print ("End time = "+ time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)));
-		print ("Total time: "+ str(end-start) + " seconds.");
+		# print ("End time = "+ time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)));
+		# print ("Total time: "+ str(end-start) + " seconds.");
 		cluster.shutdown()
 		retorno.append(end-start)
 		return (end-start)
