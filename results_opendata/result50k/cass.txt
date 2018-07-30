@@ -1,0 +1,31 @@
+Numero de registros: 50000
+Testando Cassandra...
+
+Teste no. 1
+Erro na conexao com o Cassandra
+Media de memoria: 0 KiB
+Uso medio da CPU: 0.0000%
+
+Teste no. 2
+Erro na conexao com o Cassandra
+Media de memoria: 0 KiB
+Uso medio da CPU: 0.0000%
+
+Teste no. 3
+Erro na conexao com o Cassandra
+Media de memoria: 0 KiB
+Uso medio da CPU: 0.0000%
+
+Teste no. 4
+Erro na conexao com o Cassandra
+Media de memoria: 0 KiB
+Uso medio da CPU: 0.0000%
+
+Teste no. 5
+Erro na conexao com o Cassandra
+Media de memoria: 0 KiB
+Uso medio da CPU: 0.0000%
+
+
+Media global do uso de memoria: 0
+Media global do uso de CPU: 0.0000%

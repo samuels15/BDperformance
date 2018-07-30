@@ -1,0 +1,32 @@
+Numero de registros: 100000
+Testando MongoDB...
+
+Teste no. 1
+Tempo da insercao: 259.0040 segundos
+Media de memoria: 52963 KiB
+Uso medio da CPU: 11.6951%
+
+Teste no. 2
+Tempo da insercao: 258.7255 segundos
+Media de memoria: 74257 KiB
+Uso medio da CPU: 11.9582%
+
+Teste no. 3
+Tempo da insercao: 275.4234 segundos
+Media de memoria: 74651 KiB
+Uso medio da CPU: 11.7878%
+
+Teste no. 4
+Tempo da insercao: 263.5196 segundos
+Media de memoria: 74545 KiB
+Uso medio da CPU: 11.7508%
+
+Teste no. 5
+Tempo da insercao: 259.3807 segundos
+Media de memoria: 75168 KiB
+Uso medio da CPU: 11.8551%
+
+
+Media global do tempo: 263.2106 segundos
+Media global do uso de memoria: 70316
+Media global do uso de CPU: 11.8094%
