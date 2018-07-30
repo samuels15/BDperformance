@@ -1,0 +1,32 @@
+Numero de registros: 5000
+Testando InfluxDB...
+
+Teste no. 1
+Tempo da insercao: 56.3121 segundos
+Media de memoria: 211215 KiB
+Uso medio da CPU: 16.8103%
+
+Teste no. 2
+Tempo da insercao: 50.8596 segundos
+Media de memoria: 257122 KiB
+Uso medio da CPU: 30.7580%
+
+Teste no. 3
+Tempo da insercao: 52.7142 segundos
+Media de memoria: 262392 KiB
+Uso medio da CPU: 30.4179%
+
+Teste no. 4
+Tempo da insercao: 51.8353 segundos
+Media de memoria: 264761 KiB
+Uso medio da CPU: 30.8078%
+
+Teste no. 5
+Tempo da insercao: 53.0883 segundos
+Media de memoria: 271611 KiB
+Uso medio da CPU: 30.7731%
+
+
+Media global do tempo: 52.9619 segundos
+Media global do uso de memoria: 253420
+Media global do uso de CPU: 27.9134%

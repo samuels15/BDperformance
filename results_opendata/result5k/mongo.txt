@@ -1,0 +1,26 @@
+Testando MongoDB...
+
+Teste no. 1
+Tempo da insercao: 34.3857 segundos
+Media de memoria: 19724 KiB
+Uso medio da CPU: 5.7864%
+
+Teste no. 2
+Tempo da insercao: 16.0291 segundos
+Media de memoria: 21863 KiB
+Uso medio da CPU: 9.6700%
+
+Teste no. 3
+Tempo da insercao: 7.9959 segundos
+Media de memoria: 23099 KiB
+Uso medio da CPU: 14.9980%
+
+Teste no. 4
+Tempo da insercao: 7.5941 segundos
+Media de memoria: 24044 KiB
+Uso medio da CPU: 16.8522%
+
+Teste no. 5
+Tempo da insercao: 9.0050 segundos
+Media de memoria: 25006 KiB
+Uso medio da CPU: 13.6547%

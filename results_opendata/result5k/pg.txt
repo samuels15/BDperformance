@@ -1,0 +1,32 @@
+Numero de registros: 5000
+Testando PostgreSQL...
+
+Teste no. 1
+Tempo da insercao: 3.2553 segundos
+Media de memoria: 10157 KiB
+Uso medio da CPU: 18.6583%
+
+Teste no. 2
+Tempo da insercao: 3.0869 segundos
+Media de memoria: 11517 KiB
+Uso medio da CPU: 28.9417%
+
+Teste no. 3
+Tempo da insercao: 3.1609 segundos
+Media de memoria: 12083 KiB
+Uso medio da CPU: 32.1000%
+
+Teste no. 4
+Tempo da insercao: 2.8649 segundos
+Media de memoria: 12080 KiB
+Uso medio da CPU: 35.6250%
+
+Teste no. 5
+Tempo da insercao: 2.7410 segundos
+Media de memoria: 11969 KiB
+Uso medio da CPU: 41.5091%
+
+
+Media global do tempo: 3.0218 segundos
+Media global do uso de memoria: 11561
+Media global do uso de CPU: 31.3668%

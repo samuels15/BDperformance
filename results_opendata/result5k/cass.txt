@@ -1,0 +1,32 @@
+Numero de registros: 5000
+Testando Cassandra...
+
+Teste no. 1
+Tempo da insercao: 40.6785 segundos
+Media de memoria: 1387432 KiB
+Uso medio da CPU: 44.9686%
+
+Teste no. 2
+Tempo da insercao: 33.6361 segundos
+Media de memoria: 1399937 KiB
+Uso medio da CPU: 43.1023%
+
+Teste no. 3
+Tempo da insercao: 19.1748 segundos
+Media de memoria: 1406741 KiB
+Uso medio da CPU: 42.7396%
+
+Teste no. 4
+Tempo da insercao: 15.1898 segundos
+Media de memoria: 1407927 KiB
+Uso medio da CPU: 36.4846%
+
+Teste no. 5
+Tempo da insercao: 12.9057 segundos
+Media de memoria: 1409327 KiB
+Uso medio da CPU: 39.1077%
+
+
+Media global do tempo: 24.3170 segundos
+Media global do uso de memoria: 1402272
+Media global do uso de CPU: 41.2806%
