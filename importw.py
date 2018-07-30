@@ -1,12 +1,12 @@
 import sys
-from load_data import load_wales
+# from load_data import load_wales
 from load_uiot import importing, filtering
-from postgres_insert import pg_insert, retorno as avg_pstg
-from influxdb_insert import influx_insert, retorno as avg_iflx
-from cassandra_insert import cassandra_insert, retorno as avg_cass
-from mongo_insert import mongo_insert, retorno as avg_mong
-from monitor import monitor, mem, cpu
-import threading
+# from postgres_insert import pg_insert, retorno as avg_pstg
+# from influxdb_insert import influx_insert, retorno as avg_iflx
+# from cassandra_insert import cassandra_insert, retorno as avg_cass
+# from mongo_insert import mongo_insert, retorno as avg_mong
+# from monitor import monitor, mem, cpu
+# import threading
 
 def main():
 	dataSetSize = 100000;	# tamanho de dados padrao para inserir
@@ -24,10 +24,12 @@ def main():
 						+'\n3. Cassandra'
 						+'\n4. MongoDB'
 						+'\n0. Cancelar e sair.\n')
-						
-	uiotdata = importing('data/uiot');		# caminho do arquivo json SEM extensao
+	print ("Importing...")
+	uiotdata = importing('data/uiot', dataSetSize);		# caminho do arquivo json SEM extensao
+	print ("Filtering...")
 	uiotdata = filtering(uiotdata);
 	# waterWales = load_wales(dataSetSize);
+	print ("Filtering finished.");
 
 	# if (str(opt)=='1'):
 	# 	print ("Testando PostgreSQL...");

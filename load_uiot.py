@@ -1,11 +1,12 @@
 import json
+import csv
 from datetime import datetime
 import time
 
-def importing(file):
+def importing(file, size):
     with open(file + ".json") as json_data:
         d = json.load(json_data)
-        return d["docs"]
+        return d["docs"][:size]
 
 def filtering(registers):       # funcao feita para filtragem dos dados em data
     try:
@@ -52,7 +53,17 @@ def filtering(registers):       # funcao feita para filtragem dos dados em data
         # Testando tamanhos das listas dos valores:
         with open('data/uiotf.json', 'w') as outfile:
             outfile.write(json.dumps(registers, sort_keys=True, indent=4))
+        # Exportando json para csv:
+
+        with open('data/uiotf.csv', 'wb') as outfile:
+            for item in registers:
+                w = csv.DictWriter(outfile, item.keys(), delimiter=';', quotechar=';');
+                # w.writeheader()
+                w.writerow(item);
+
         return registers
+
+
     except:
         print("Erro na filtragem")
 
