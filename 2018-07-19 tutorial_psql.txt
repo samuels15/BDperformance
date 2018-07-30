@@ -1,0 +1,31 @@
+
+# LOGIN:
+sudo -u postgres psql
+
+# LISTAR DATABASES
+\list
+
+#Criar database
+CREATE DATABASE pibic;
+
+# Mudar pra database:
+\c pibic
+
+# Mostrar schemas
+select schema_name
+from information_schema.schemata
+
+# Mostrar atual schema
+SHOW search_path;
+
+# Criar tabela
+CREATE TABLE data (tempo timestamp without timezone, mac char(50), parametro char(50), valor char(50));
+
+# Import file
+\i data/docs/dataq.sql
+
+# Sair do psql
+\q
+
+# Rodar query e exportar arquivo
+sudo -u postgres psql -d pibic -t -A -F";" -c "SELECT * FROM data ORDER BY tempo" > docs/data/datao.csv
