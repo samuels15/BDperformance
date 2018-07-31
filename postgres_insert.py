@@ -16,17 +16,21 @@ def pg_insert(registers):
 
 	cur = conn.cursor()
 	try:
-		query = "TRUNCATE TABLE walesTemperature"
+		query = "DROP TABLE IF EXISTS lab"
 		# print query
+		cur.execute(query)
+		query = "CREATE TABLE public.lab( id integer NOT NULL, clientTime double precision, serverTime double precision, clientTimef timestamp without time zone, servertimef timestamp without time zone, mac character varying (40), values double precision);"
 		cur.execute(query)
 		conn.commit()
 		start = time.time()
 		# print("Start time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start)))
 		for item in registers:
-			query = "INSERT INTO public.walesTemperature (id, siteID, sampleDate, sampleTime, detCode,"+\
-				"detResult, sourceCode, sampleID, sampleComment,sampleFlag, timeTag) " +\
+			query = "INSERT INTO public.walesTemperature (id, clientTimef, "+\
+			 	"serverTimef, clientTime, serverTime, "+\
+				"mac, parameters, values) " +\
 				"VALUES ("+repr(item)+");";
-			cur.execute(query)
+			# cur.execute(query)
+			print (query)
 		conn.commit()
 		end = time.time()
 		# print("End time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)))
