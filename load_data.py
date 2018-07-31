@@ -28,7 +28,7 @@ def load_uiot(dataSetSize):
 			if i >= dataSetSize:
 				break
 			uiotdata.append(UIoT(i, row))
-			print row
+			# print row
 			i+=1
 		csvfile.close();
 	print ("Numero de registros: "+str(i))

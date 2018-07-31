@@ -19,18 +19,18 @@ def pg_insert(registers):
 		query = "DROP TABLE IF EXISTS lab"
 		# print query
 		cur.execute(query)
-		query = "CREATE TABLE public.lab( id integer NOT NULL, clientTime double precision, serverTime double precision, clientTimef timestamp without time zone, servertimef timestamp without time zone, mac character varying (40), values double precision);"
+		query = "CREATE TABLE public.lab (id integer NOT NULL, clientTime double precision, serverTime double precision, clientTimef timestamp without time zone, servertimef timestamp without time zone, mac character varying (40), parameters character varying (60), values double precision);"
 		cur.execute(query)
 		conn.commit()
 		start = time.time()
 		# print("Start time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start)))
 		for item in registers:
-			query = "INSERT INTO public.walesTemperature (id, clientTimef, "+\
+			query = "INSERT INTO public.lab (id, clientTimef, "+\
 			 	"serverTimef, clientTime, serverTime, "+\
 				"mac, parameters, values) " +\
 				"VALUES ("+repr(item)+");";
-			# cur.execute(query)
-			print (query)
+			cur.execute(query)
+			# print (query)
 		conn.commit()
 		end = time.time()
 		# print("End time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)))
@@ -40,7 +40,7 @@ def pg_insert(registers):
 		retorno.append(end-start)
 		return end-start
 	except IndexError:
-		print("Erro 3: Postgre acusou erro na query de inserir a temperatura da agua em Wales.\n\n")
+		print("Erro 3: Postgre acusou erro na query de insercao.\n\n")
 		conn.rollback()
 		cur.close()
 		conn.close()

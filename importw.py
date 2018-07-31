@@ -4,8 +4,8 @@ from postgres_insert import pg_insert, retorno as avg_pstg
 # from influxdb_insert import influx_insert, retorno as avg_iflx
 # from cassandra_insert import cassandra_insert, retorno as avg_cass
 # from mongo_insert import mongo_insert, retorno as avg_mong
-# from monitor import monitor, mem, cpu
-# import threading
+from monitor import monitor, mem, cpu
+import threading
 
 def main():
 	dataSetSize = 100000;	# tamanho de dados padrao para inserir
@@ -25,8 +25,8 @@ def main():
 						+'\n0. Cancelar e sair.\n')
 	uiot = load_uiot(100)
 	# uiot = load_uiot(dataSetSize)
-	for item in uiot:
-		print repr(item)
+	# for item in uiot:
+	# 	print repr(item)
 
 	if (str(opt)=='1'):
 		print ("Testando PostgreSQL...");
