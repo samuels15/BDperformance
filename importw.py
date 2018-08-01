@@ -23,8 +23,8 @@ def main():
 						+'\n3. Cassandra'
 						+'\n4. MongoDB'
 						+'\n0. Cancelar e sair.\n')
-	uiot = load_uiot(100)
-	# uiot = load_uiot(dataSetSize)
+	uiot = load_uiot(dataSetSize)
+	# uiot = load_uiot(100)
 	# for item in uiot:
 	# 	print repr(item)
 

@@ -29,8 +29,12 @@ def pg_insert(registers):
 			 	"serverTimef, clientTime, serverTime, "+\
 				"mac, parameters, values) " +\
 				"VALUES ("+repr(item)+");";
-			cur.execute(query)
-			# print (query)
+			try:
+				cur.execute(query)
+			except:
+				print ("Erro na execucao da query.")
+				print (query)
+				conn.rollback();
 		conn.commit()
 		end = time.time()
 		# print("End time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)))
@@ -41,6 +45,13 @@ def pg_insert(registers):
 		return end-start
 	except IndexError:
 		print("Erro 3: Postgre acusou erro na query de insercao.\n\n")
+		conn.rollback()
+		cur.close()
+		conn.close()
+		sys.exit(1)
+	except:
+		print ("Abortando: erro desconhecido na query de insercao")
+		print (query)
 		conn.rollback()
 		cur.close()
 		conn.close()
