@@ -8,8 +8,8 @@ def mongo_insert(registers):
 	try:
 		client = MongoClient('localhost', 27017);	 # conectando ao mongo no localhost, porta 27017
 		database = client['tg1'];
-		temperature = database['temperature'];
-		temperature.drop();
+		lab = database['lab'];
+		lab.drop();
 	except:
 		print "Erro na conexao com o MongoDB";
 		sys.exit(0)
@@ -18,7 +18,7 @@ def mongo_insert(registers):
 		start = time.time()
 		# print("Start time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start)))
 		for item in registers:
-			temperature.insert_one(mkjson_object(item));
+			lab.insert_one(mkjson_object(item));
 			# mem_array.append(monitor.get_memory_usage("mongodb"));
 			# print mkjson_object(item);
 		end = time.time()
