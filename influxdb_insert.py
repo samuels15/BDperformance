@@ -13,7 +13,7 @@ def influx_insert(registers):
 		sys.exit(0)
 
 	try:
-		conn.delete_series(database='tg1', measurement='temperature')
+		conn.delete_series(database='tg1', measurement='lab')
 		start = time.time()
 		# print("Start time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start)))
 		for item in registers:

@@ -1,7 +1,7 @@
 import sys
 from load_data import load_wales, load_uiot
 from postgres_insert import pg_insert, retorno as avg_pstg
-# from influxdb_insert import influx_insert, retorno as avg_iflx
+from influxdb_insert import influx_insert, retorno as avg_iflx
 from cassandra_insert import cassandra_insert, retorno as avg_cass
 # from mongo_insert import mongo_insert, retorno as avg_mong
 from monitor import monitor, mem, cpu
@@ -62,41 +62,40 @@ def main():
 			print ("Media global do uso de memoria: %.0f" % (sum(mem_avg)/len(mem_avg)));
 		if cpu_avg:
 			print ("Media global do uso de CPU: %.4f%%"   % (sum(cpu_avg)/len(cpu_avg)));
-
-	# elif (str(opt)=='2'):
-	# 	print ("Testando InfluxDB...");
-	# 	for i in range(5):
-	# 		print ("\n"+"Teste no. "+str(i+1));
-	# 		try:
-	# 			t1=threading.Thread(target=influx_insert, args=([waterWales]));
-	# 			t2=threading.Thread(target=monitor, args=(["influxdb"]))
-	# 			t1.start();
-	# 			t2.start();
-	# 			while t1.isAlive():
-	# 				pass;
-	# 			t2.do_run = False;
-	# 			while t2.isAlive():
-	# 				pass;
-	# 			# print ('Thread executed');
-	# 			if (avg_iflx):
-	# 				print ("Tempo da insercao: %.4f segundos" % avg_iflx[-1]);
-	# 			if (mem):
-	# 				mem_avg.append(sum(mem)/len(mem))
-	# 				print ("Media de memoria: %.0f KiB" % (sum(mem)/len(mem)));
-	# 				del mem[:];	# limpando as aquisicoes dessa repeticao
-	# 			if (cpu):
-	# 				cpu_avg.append(sum(cpu)/len(cpu))
-	# 				print ("Uso medio da CPU: %.4f%%" % (sum(cpu)/len(cpu)));
-	# 				del cpu[:];	# limpando as aquisicoes dessa repeticao
-	# 		except:
-	# 			print("Erro no threading");
-	# 	print ('\n');
-	# 	if(avg_iflx):
-	# 		print ("Media global do tempo: %.4f segundos" % (sum(avg_iflx)/len(avg_iflx)));
-	# 	if mem_avg:
-	# 		print ("Media global do uso de memoria: %.0f" % (sum(mem_avg)/len(mem_avg)));
-	# 	if cpu_avg:
-	# 		print ("Media global do uso de CPU: %.4f%%"   % (sum(cpu_avg)/len(cpu_avg)));
+	elif (str(opt)=='2'):
+		print ("Testando InfluxDB...");
+		for i in range(5):
+			print ("\n"+"Teste no. "+str(i+1));
+			try:
+				t1=threading.Thread(target=influx_insert, args=([uiot]));
+				t2=threading.Thread(target=monitor, args=(["influxdb"]))
+				t1.start();
+				t2.start();
+				while t1.isAlive():
+					pass;
+				t2.do_run = False;
+				while t2.isAlive():
+					pass;
+				# print ('Thread executed');
+				if (avg_iflx):
+					print ("Tempo da insercao: %.4f segundos" % avg_iflx[-1]);
+				if (mem):
+					mem_avg.append(sum(mem)/len(mem))
+					print ("Media de memoria: %.0f KiB" % (sum(mem)/len(mem)));
+					del mem[:];	# limpando as aquisicoes dessa repeticao
+				if (cpu):
+					cpu_avg.append(sum(cpu)/len(cpu))
+					print ("Uso medio da CPU: %.4f%%" % (sum(cpu)/len(cpu)));
+					del cpu[:];	# limpando as aquisicoes dessa repeticao
+			except:
+				print("Erro no threading");
+		print ('\n');
+		if(avg_iflx):
+			print ("Media global do tempo: %.4f segundos" % (sum(avg_iflx)/len(avg_iflx)));
+		if mem_avg:
+			print ("Media global do uso de memoria: %.0f" % (sum(mem_avg)/len(mem_avg)));
+		if cpu_avg:
+			print ("Media global do uso de CPU: %.4f%%"   % (sum(cpu_avg)/len(cpu_avg)));
 	elif (str(opt)=='3'):
 		print ("Testando Cassandra...");
 		for i in range(5):
@@ -167,8 +166,8 @@ def main():
 	# 		print ("Media global do uso de CPU: %.4f%%"   % (sum(cpu_avg)/len(cpu_avg)));
 	# elif (str(opt)=='0'):
 	# 	pass
-	# else:
-	# 	print ("Opcao "+str(opt)+" invalida.")
+	else:
+		print ("Opcao "+str(opt)+" invalida ou indisponivel.")
 
 mem_avg = []
 cpu_avg = []

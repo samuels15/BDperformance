@@ -1,5 +1,3 @@
-
-
 def mkjson_string(registers):
 	jsonStr = '['
 	for item in registers:
@@ -23,21 +21,17 @@ def mkjson_string(registers):
 
 def mkjson_object(register):
 	return {
-		"measurement": "temperature",
+		"measurement": "lab",
 		"tags": {
-			"siteID": register.siteID,
-			"sampleID":register.sampleID
+			"mac": register.mac,
 		},
-		"time": register.timeTag.strftime("%Y-%m-%dT%H:%M:%SZ"),
+		"time": register.clientTimef.strftime("%Y-%m-%dT%H:%M:%SZ"),
 		"fields": {
 			"id": register.id,
-			"sampleDate":register.sampleDate,
-			"sampleTime":register.sampleTime,
-			"detCode":register.detCode,
-			"sourceCode":register.sourceCode,
-			"sampleComment": register.sampleComment,
-			"sampleFlag":register.sampleFlag,
-			"value": register.detResult
+			"clientTime":register.clientTime,
+			"serverTime":register.serverTime,
+			"serverTimef":register.serverTimef.strftime("%Y-%m-%dT%H:%M:%SZ"),
+			"parameters":register.parameters,
+			"values":register.values
 		}
 	}
-
