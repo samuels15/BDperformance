@@ -6,6 +6,7 @@ from cassandra_insert import cassandra_insert, retorno as avg_cass
 from mongo_insert import mongo_insert, retorno as avg_mong
 from monitor import monitor, mem, cpu
 import threading
+import time
 
 def main():
 	dataSetSize = 100000;	# tamanho de dados padrao para inserir
@@ -55,6 +56,7 @@ def main():
 					del cpu[:];	# limpando as aquisicoes dessa repeticao
 			except:
 				print ("Erro no threading");
+			time.sleep(60)		# Pausa de um minuto antes da proxima bateria de testes
 		print ('\n');
 		if(avg_pstg):
 			print ("Media global do tempo: %.4f segundos" % (sum(avg_pstg)/len(avg_pstg)));
@@ -89,6 +91,7 @@ def main():
 					del cpu[:];	# limpando as aquisicoes dessa repeticao
 			except:
 				print("Erro no threading");
+			time.sleep(60)		# Pausa de um minuto antes da proxima bateria de testes
 		print ('\n');
 		if(avg_iflx):
 			print ("Media global do tempo: %.4f segundos" % (sum(avg_iflx)/len(avg_iflx)));
@@ -123,6 +126,7 @@ def main():
 					del cpu[:];	# limpando as aquisicoes dessa repeticao
 			except:
 				print("Erro no threading");
+			time.sleep(60)		# Pausa de um minuto antes da proxima bateria de testes
 		print ('\n');
 		if(avg_cass):
 			print ("Media global do tempo: %.4f segundos" % (sum(avg_cass)/len(avg_cass)));
@@ -157,6 +161,7 @@ def main():
 					del cpu[:];	# limpando as aquisicoes dessa repeticao
 			except:
 				print ("Erro no threading")
+			time.sleep(60)		# Pausa de um minuto antes da proxima bateria de testes
 		print ('\n');
 		if(avg_mong):
 			print ("Media global do tempo: %.4f segundos" % (sum(avg_mong)/len(avg_mong)));
@@ -164,6 +169,7 @@ def main():
 			print ("Media global do uso de memoria: %.0f" % (sum(mem_avg)/len(mem_avg)));
 		if cpu_avg:
 			print ("Media global do uso de CPU: %.4f%%"   % (sum(cpu_avg)/len(cpu_avg)));
+
 	elif (str(opt)=='0'):
 		pass
 	else:
