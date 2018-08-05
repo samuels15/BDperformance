@@ -1,0 +1,36 @@
+Numero de registros: 10000
+Testando InfluxDB...
+
+Teste no. 1
+Tempo da insercao: 408.2480 segundos
+Media de memoria: 313088 KiB
+Uso medio da CPU: 24.3130%
+
+Teste no. 2
+Influx: Inserts nao totalmente processados
+Tempo da insercao: 408.2480 segundos
+Media de memoria: 373557 KiB
+Uso medio da CPU: 8.6864%
+
+Teste no. 3
+Influx: Inserts nao totalmente processados
+Tempo da insercao: 408.2480 segundos
+Media de memoria: 433032 KiB
+Uso medio da CPU: 13.8763%
+
+Teste no. 4
+Influx: Inserts nao totalmente processados
+Tempo da insercao: 408.2480 segundos
+Media de memoria: 462099 KiB
+Uso medio da CPU: 5.6887%
+
+Teste no. 5
+Influx: Inserts nao totalmente processados
+Tempo da insercao: 408.2480 segundos
+Media de memoria: 480864 KiB
+Uso medio da CPU: 1.5162%
+
+
+Media global do tempo: 408.2480 segundos
+Media global do uso de memoria: 412528
+Media global do uso de CPU: 10.8161%

@@ -1,0 +1,32 @@
+Numero de registros: 10000
+Testando Cassandra...
+
+Teste no. 1
+Erro na conexao com o Cassandra
+Media de memoria: 1364540 KiB
+Uso medio da CPU: 1.7798%
+
+Teste no. 2
+Erro na conexao com o Cassandra
+Media de memoria: 1365068 KiB
+Uso medio da CPU: 1.3405%
+
+Teste no. 3
+Tempo da insercao: 41.8639 segundos
+Media de memoria: 1367083 KiB
+Uso medio da CPU: 6.9402%
+
+Teste no. 4
+Tempo da insercao: 53.6868 segundos
+Media de memoria: 1373250 KiB
+Uso medio da CPU: 24.0802%
+
+Teste no. 5
+Tempo da insercao: 40.2056 segundos
+Media de memoria: 1375942 KiB
+Uso medio da CPU: 0.4641%
+
+
+Media global do tempo: 45.2521 segundos
+Media global do uso de memoria: 1369176
+Media global do uso de CPU: 6.9209%

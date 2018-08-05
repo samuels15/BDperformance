@@ -1,0 +1,31 @@
+Numero de registros: 50000
+Testando InfluxDB...
+
+Teste no. 1
+Influx: Inserts nao totalmente processados
+Media de memoria: 302177 KiB
+Uso medio da CPU: 3.0909%
+
+Teste no. 2
+Influx: Inserts nao totalmente processados
+Media de memoria: 355936 KiB
+Uso medio da CPU: 1.4421%
+
+Teste no. 3
+Erro: Impossivel conectar com o InfluxDB
+Media de memoria: 14124 KiB
+Uso medio da CPU: 0.4000%
+
+Teste no. 4
+Erro: Impossivel conectar com o InfluxDB
+Media de memoria: 14124 KiB
+Uso medio da CPU: 0.0000%
+
+Teste no. 5
+Erro: Impossivel conectar com o InfluxDB
+Media de memoria: 14680 KiB
+Uso medio da CPU: 0.0000%
+
+
+Media global do uso de memoria: 140208
+Media global do uso de CPU: 0.9866%
