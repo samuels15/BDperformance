@@ -26,6 +26,10 @@ def filtering(registers):       # funcao feita para filtragem dos dados em data
                 mac = 'undefined'
                 param = doc["parameters"][0]
                 value = doc["values"][0]
+                try:        # tratando valores nao numericos
+                    value = float(value);
+                except ValueError:
+                    value = 0;
                 commaindex = param.rfind(':')
                 if commaindex >=0:
                     mac = param[:commaindex].upper()
