@@ -3,29 +3,29 @@ Testando Cassandra...
 
 Teste no. 1
 Cassandra: Erro na query
-Media de memoria: 0 KiB
-Uso medio da CPU: 0.0000%
+Media de memoria: 1402911 KiB
+Uso medio da CPU: 34.3958%
 
 Teste no. 2
-Cassandra: Erro na query
-Media de memoria: 0 KiB
-Uso medio da CPU: 0.0000%
+Erro na conexao com o Cassandra
+Media de memoria: 1405532 KiB
+Uso medio da CPU: 0.5248%
 
 Teste no. 3
 Cassandra: Erro na query
-Media de memoria: 0 KiB
-Uso medio da CPU: 0.0000%
+Media de memoria: 1405849 KiB
+Uso medio da CPU: 1.3365%
 
 Teste no. 4
 Cassandra: Erro na query
-Media de memoria: 0 KiB
-Uso medio da CPU: 0.0000%
+Media de memoria: 1404360 KiB
+Uso medio da CPU: 40.8095%
 
 Teste no. 5
 Cassandra: Erro na query
-Media de memoria: 0 KiB
-Uso medio da CPU: 0.0000%
+Media de memoria: 1407560 KiB
+Uso medio da CPU: 40.5055%
 
 
-Media global do uso de memoria: 0
-Media global do uso de CPU: 0.0000%
+Media global do uso de memoria: 1405242
+Media global do uso de CPU: 23.5144%

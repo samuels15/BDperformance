@@ -19,10 +19,10 @@
 #python importw.py 500000 3 > results_lab/500k/cassandra.txt
 #python importw.py 500000 4 > results_lab/500k/mongo.txt
 
-python importw.py 50000 1 > results_lab/50k/pg.txt
+python importw.py 1000 1 > results_lab/pg.txt
 sleep 60
-python importw.py 50000 2 > results_lab/50k/influx.txt
+python importw.py 1000 2 > results_lab/influx.txt
 sleep 60
-python importw.py 50000 3 > results_lab/50k/cassandra.txt
+python importw.py 1000 3 > results_lab/cassandra.txt
 sleep 60
-python importw.py 50000 4 > results_lab/50k/mongo.txt
+python importw.py 1000 4 > results_lab/mongo.txt

@@ -27,8 +27,12 @@ def cassandra_insert(registers):
 			query = "INSERT INTO lab (id, clientTimef, serverTimef, "+\
 			 	"clientTime, serverTime, mac, parameters, values) "+\
 				" VALUES ("+repr(item)+");";
-			#print query;
-			session.execute(query);
+			try:
+				session.execute(query);
+			except:
+				print ("Erro na execucao da query.")
+				print (query)
+
 		end = time.time();
 		# print ("End time = "+ time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)));
 		# print ("Total time: "+ str(end-start) + " seconds.");

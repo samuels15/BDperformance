@@ -18,9 +18,9 @@ Erro na execucao da query.
 INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (42178,'2017-09-13T21:48:16Z','2017-09-13T21:48:16Z',1505350096.8888,1505350096.929,'AA','dd',EE);
 Erro na execucao da query.
 INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (42872,'2017-09-13T21:39:42Z','2017-09-13T21:39:42Z',1505349582.6736,1505349582.7115,'AA','dd',ee);
-Tempo da insercao: 25.2942 segundos
-Media de memoria: 14888 KiB
-Uso medio da CPU: 16.9924%
+Tempo da insercao: 87.9760 segundos
+Media de memoria: 16449 KiB
+Uso medio da CPU: 11.5003%
 
 Teste no. 2
 Erro na execucao da query.
@@ -39,9 +39,9 @@ Erro na execucao da query.
 INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (42178,'2017-09-13T21:48:16Z','2017-09-13T21:48:16Z',1505350096.8888,1505350096.929,'AA','dd',EE);
 Erro na execucao da query.
 INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (42872,'2017-09-13T21:39:42Z','2017-09-13T21:39:42Z',1505349582.6736,1505349582.7115,'AA','dd',ee);
-Tempo da insercao: 16.6903 segundos
-Media de memoria: 18786 KiB
-Uso medio da CPU: 37.4119%
+Tempo da insercao: 35.9369 segundos
+Media de memoria: 18617 KiB
+Uso medio da CPU: 27.2898%
 
 Teste no. 3
 Erro na execucao da query.
@@ -60,9 +60,9 @@ Erro na execucao da query.
 INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (42178,'2017-09-13T21:48:16Z','2017-09-13T21:48:16Z',1505350096.8888,1505350096.929,'AA','dd',EE);
 Erro na execucao da query.
 INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (42872,'2017-09-13T21:39:42Z','2017-09-13T21:39:42Z',1505349582.6736,1505349582.7115,'AA','dd',ee);
-Tempo da insercao: 16.7495 segundos
-Media de memoria: 18570 KiB
-Uso medio da CPU: 37.2132%
+Tempo da insercao: 27.2945 segundos
+Media de memoria: 19345 KiB
+Uso medio da CPU: 40.7475%
 
 Teste no. 4
 Erro na execucao da query.
@@ -81,9 +81,9 @@ Erro na execucao da query.
 INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (42178,'2017-09-13T21:48:16Z','2017-09-13T21:48:16Z',1505350096.8888,1505350096.929,'AA','dd',EE);
 Erro na execucao da query.
 INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (42872,'2017-09-13T21:39:42Z','2017-09-13T21:39:42Z',1505349582.6736,1505349582.7115,'AA','dd',ee);
-Tempo da insercao: 18.1777 segundos
-Media de memoria: 16144 KiB
-Uso medio da CPU: 29.8405%
+Tempo da insercao: 27.9548 segundos
+Media de memoria: 17803 KiB
+Uso medio da CPU: 36.4462%
 
 Teste no. 5
 Erro na execucao da query.
@@ -102,11 +102,11 @@ Erro na execucao da query.
 INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (42178,'2017-09-13T21:48:16Z','2017-09-13T21:48:16Z',1505350096.8888,1505350096.929,'AA','dd',EE);
 Erro na execucao da query.
 INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (42872,'2017-09-13T21:39:42Z','2017-09-13T21:39:42Z',1505349582.6736,1505349582.7115,'AA','dd',ee);
-Tempo da insercao: 18.0145 segundos
-Media de memoria: 18684 KiB
-Uso medio da CPU: 37.4753%
+Tempo da insercao: 25.1181 segundos
+Media de memoria: 18132 KiB
+Uso medio da CPU: 41.7267%
 
 
-Media global do tempo: 18.9852 segundos
-Media global do uso de memoria: 17414
-Media global do uso de CPU: 31.7867%
+Media global do tempo: 40.8560 segundos
+Media global do uso de memoria: 18069
+Media global do uso de CPU: 31.5421%
