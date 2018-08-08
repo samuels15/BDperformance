@@ -3,29 +3,30 @@ Testando InfluxDB...
 
 Teste no. 1
 Influx: Inserts nao totalmente processados
-Media de memoria: 1169 KiB
-Uso medio da CPU: 0.0069%
+Media de memoria: 269614 KiB
+Uso medio da CPU: 10.1510%
 
 Teste no. 2
-Erro: Impossivel conectar com o InfluxDB
-Media de memoria: 3906 KiB
-Uso medio da CPU: 3.1500%
+Tempo da insercao: 23026.0700 segundos
+Media de memoria: 38715 KiB
+Uso medio da CPU: 1.3275%
 
 Teste no. 3
-Erro: Impossivel conectar com o InfluxDB
-Media de memoria: 4760 KiB
-Uso medio da CPU: 0.0000%
+Tempo da insercao: 14916.3394 segundos
+Media de memoria: 382712 KiB
+Uso medio da CPU: 11.9300%
 
 Teste no. 4
-Erro: Impossivel conectar com o InfluxDB
-Media de memoria: 4760 KiB
-Uso medio da CPU: 0.0000%
+Tempo da insercao: 11556.0820 segundos
+Media de memoria: 419827 KiB
+Uso medio da CPU: 13.9770%
 
 Teste no. 5
-Erro: Impossivel conectar com o InfluxDB
-Media de memoria: 5968 KiB
-Uso medio da CPU: 9.9000%
+Tempo da insercao: 10911.8304 segundos
+Media de memoria: 393477 KiB
+Uso medio da CPU: 13.8140%
 
 
-Media global do uso de memoria: 4112
-Media global do uso de CPU: 2.6114%
+Media global do tempo: 15102.5805 segundos
+Media global do uso de memoria: 300869
+Media global do uso de CPU: 10.2399%

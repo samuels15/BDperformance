@@ -9,16 +9,6 @@
 #python importw.py 50000 3 > results_lab/50k/cassandra.txt
 #python importw.py 50000 4 > results_lab/50k/mongo.txt
 
-#python importw.py 100000 1 > results_lab/100k/pg.txt
-#python importw.py 100000 2 > results_lab/100k/influx.txt
-#python importw.py 100000 3 > results_lab/100k/cassandra.txt
-#python importw.py 100000 4 > results_lab/100k/mongo.txt
-
-#python importw.py 500000 1 > results_lab/500k/pg.txt
-#python importw.py 500000 2 > results_lab/500k/influx.txt
-#python importw.py 500000 3 > results_lab/500k/cassandra.txt
-#python importw.py 500000 4 > results_lab/500k/mongo.txt
-
 python importw.py 50000 1 > results_lab/50k/pg.txt
 sleep 60
 python importw.py 50000 2 > results_lab/50k/influx.txt
@@ -26,3 +16,21 @@ sleep 60
 python importw.py 50000 3 > results_lab/50k/cassandra.txt
 sleep 60
 python importw.py 50000 4 > results_lab/50k/mongo.txt
+
+sleep 60
+python importw.py 100000 1 > results_lab/100k/pg.txt
+sleep 60
+python importw.py 100000 2 > results_lab/100k/influx.txt
+sleep 60
+python importw.py 100000 3 > results_lab/100k/cassandra.txt
+sleep 60
+python importw.py 100000 4 > results_lab/100k/mongo.txt
+
+sleep 60
+python importw.py 500000 1 > results_lab/500k/pg.txt
+sleep 60
+python importw.py 500000 2 > results_lab/500k/influx.txt
+sleep 60
+python importw.py 500000 3 > results_lab/500k/cassandra.txt
+sleep 60
+python importw.py 500000 4 > results_lab/500k/mongo.txt

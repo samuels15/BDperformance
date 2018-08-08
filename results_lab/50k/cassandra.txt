@@ -2,30 +2,55 @@ Numero de registros: 50000
 Testando Cassandra...
 
 Teste no. 1
-Cassandra: Erro na query
-Media de memoria: 1402911 KiB
-Uso medio da CPU: 34.3958%
+Tempo da insercao: 279.0107 segundos
+Media de memoria: 1419193 KiB
+Uso medio da CPU: 12.5549%
 
 Teste no. 2
-Erro na conexao com o Cassandra
-Media de memoria: 1405532 KiB
-Uso medio da CPU: 0.5248%
+Tempo da insercao: 335.5044 segundos
+Media de memoria: 1427064 KiB
+Uso medio da CPU: 25.2841%
 
 Teste no. 3
-Cassandra: Erro na query
-Media de memoria: 1405849 KiB
-Uso medio da CPU: 1.3365%
+Tempo da insercao: 337.0399 segundos
+Media de memoria: 1432615 KiB
+Uso medio da CPU: 24.9633%
 
 Teste no. 4
-Cassandra: Erro na query
-Media de memoria: 1404360 KiB
-Uso medio da CPU: 40.8095%
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (13899,'2017-09-26T14:28:52Z','2017-09-26T14:28:52Z',1506446932.3283,1506446932.3711,'AA:BB:CC:DD:FA:06','cur',206.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (13902,'2017-09-21T18:56:00Z','2017-09-21T18:56:00Z',1506030960.0025,1506030960.0303,'AA:BB:CC:DD:FA:06','temp',26.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (13905,'2017-09-08T22:56:57Z','2017-09-08T22:56:57Z',1504922217.1425,1504922217.1787,'AA:BB:CC:DD:FA:00','soil_humidity',42.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (13935,'2017-09-21T07:16:23Z','2017-09-21T07:16:23Z',1505988983.5887,1505988983.6151,'AA:BB:CC:DD:FA:06','temp',26.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (15573,'2017-09-18T06:43:13Z','2017-09-18T06:43:13Z',1505727793.2501,1505727793.2804,'AA:BB:CC:DD:FA:00','humidity',33.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (21342,'2017-09-22T08:36:29Z','2017-09-22T08:36:29Z',1506080189.2891,1506080189.3179,'AA:BB:CC:DD:FA:06','lux',72.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (36630,'2017-09-13T23:25:59Z','2017-09-13T23:25:59Z',1505355959.0246,1505355959.0578,'AA:BB:CC:DD:FA:00','soil_humidity',32.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (36633,'2017-09-25T22:03:36Z','2017-09-25T22:03:36Z',1506387816.791,1506387816.826,'0013A20040C1A93D','zb_temp',23.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (36636,'2017-09-15T08:39:07Z','2017-09-15T08:39:07Z',1505475547.0225,1505475547.0524,'AA:BB:CC:DD:FA:00','humidity',34.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (36639,'2017-09-15T05:58:19Z','2017-09-15T05:58:19Z',1505465899.8899,1505465899.92,'AA:BB:CC:DD:FA:00','temperature',23.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (36642,'2017-09-09T14:21:08Z','2017-09-09T14:21:08Z',1504977668.2024,1504977668.2374,'AA:BB:CC:DD:FA:00','soil_humidity',42.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (36645,'2017-09-12T15:53:10Z','2017-09-12T15:53:10Z',1505242390.0051,1505242390.0335,'0013A20040C1A93D','zb_hum',35.0);
+Tempo da insercao: 518.2186 segundos
+Media de memoria: 1421398 KiB
+Uso medio da CPU: 16.3741%
 
 Teste no. 5
-Cassandra: Erro na query
-Media de memoria: 1407560 KiB
-Uso medio da CPU: 40.5055%
+Tempo da insercao: 201.2426 segundos
+Media de memoria: 1435404 KiB
+Uso medio da CPU: 38.7911%
 
 
-Media global do uso de memoria: 1405242
-Media global do uso de CPU: 23.5144%
+Media global do tempo: 334.2032 segundos
+Media global do uso de memoria: 1427134
+Media global do uso de CPU: 23.5935%

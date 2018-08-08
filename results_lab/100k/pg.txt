@@ -2,201 +2,31 @@ Numero de registros: 100000
 Testando PostgreSQL...
 
 Teste no. 1
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (13041,'2017-09-18T22:12:16Z','2017-09-18T22:12:16Z',1505783536.5801,1505783536.6104,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (18405,'2017-09-18T22:02:24Z','2017-09-18T22:02:24Z',1505782944.0659,1505782944.1081,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (23251,'2017-09-18T22:11:59Z','2017-09-18T22:11:59Z',1505783519.2189,1505783519.2645,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (25363,'2017-09-13T21:48:19Z','2017-09-13T21:48:19Z',1505350099.9018,1505350099.9405,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (25580,'2017-09-13T21:48:21Z','2017-09-13T21:48:21Z',1505350101.5966,1505350101.6376,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (33194,'2017-09-13T21:49:39Z','2017-09-13T21:49:39Z',1505350179.4863,1505350179.5337,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (42178,'2017-09-13T21:48:16Z','2017-09-13T21:48:16Z',1505350096.8888,1505350096.929,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (42872,'2017-09-13T21:39:42Z','2017-09-13T21:39:42Z',1505349582.6736,1505349582.7115,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (76206,'2017-09-13T21:48:21Z','2017-09-13T21:48:21Z',1505350101.1618,1505350101.2059,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (86708,'2017-09-13T21:39:43Z','2017-09-13T21:39:43Z',1505349583.7272,1505349583.792,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (91330,'2017-09-13T21:48:18Z','2017-09-13T21:48:18Z',1505350098.4877,1505350098.5397,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (92818,'2017-09-18T22:01:32Z','2017-09-18T22:01:32Z',1505782892.0961,1505782892.136,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (93353,'2017-09-18T22:09:58Z','2017-09-18T22:09:59Z',1505783398.9837,1505783399.0243,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (94854,'2017-09-13T21:48:17Z','2017-09-13T21:48:17Z',1505350097.8603,1505350097.9114,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (95236,'2017-09-13T22:04:30Z','2017-09-13T22:04:30Z',1505351070.7768,1505351070.8285,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (96363,'2017-09-18T22:03:36Z','2017-09-18T22:03:36Z',1505783016.048,1505783016.0852,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (99733,'2017-09-13T21:48:16Z','2017-09-13T21:48:16Z',1505350096.629,1505350096.6746,'AA','dd',EE);
-Tempo da insercao: 78.5119 segundos
-Media de memoria: 18901 KiB
-Uso medio da CPU: 14.2751%
+Tempo da insercao: 54.6911 segundos
+Media de memoria: 21733 KiB
+Uso medio da CPU: 38.8758%
 
 Teste no. 2
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (13041,'2017-09-18T22:12:16Z','2017-09-18T22:12:16Z',1505783536.5801,1505783536.6104,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (18405,'2017-09-18T22:02:24Z','2017-09-18T22:02:24Z',1505782944.0659,1505782944.1081,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (23251,'2017-09-18T22:11:59Z','2017-09-18T22:11:59Z',1505783519.2189,1505783519.2645,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (25363,'2017-09-13T21:48:19Z','2017-09-13T21:48:19Z',1505350099.9018,1505350099.9405,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (25580,'2017-09-13T21:48:21Z','2017-09-13T21:48:21Z',1505350101.5966,1505350101.6376,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (33194,'2017-09-13T21:49:39Z','2017-09-13T21:49:39Z',1505350179.4863,1505350179.5337,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (42178,'2017-09-13T21:48:16Z','2017-09-13T21:48:16Z',1505350096.8888,1505350096.929,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (42872,'2017-09-13T21:39:42Z','2017-09-13T21:39:42Z',1505349582.6736,1505349582.7115,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (76206,'2017-09-13T21:48:21Z','2017-09-13T21:48:21Z',1505350101.1618,1505350101.2059,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (86708,'2017-09-13T21:39:43Z','2017-09-13T21:39:43Z',1505349583.7272,1505349583.792,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (91330,'2017-09-13T21:48:18Z','2017-09-13T21:48:18Z',1505350098.4877,1505350098.5397,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (92818,'2017-09-18T22:01:32Z','2017-09-18T22:01:32Z',1505782892.0961,1505782892.136,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (93353,'2017-09-18T22:09:58Z','2017-09-18T22:09:59Z',1505783398.9837,1505783399.0243,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (94854,'2017-09-13T21:48:17Z','2017-09-13T21:48:17Z',1505350097.8603,1505350097.9114,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (95236,'2017-09-13T22:04:30Z','2017-09-13T22:04:30Z',1505351070.7768,1505351070.8285,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (96363,'2017-09-18T22:03:36Z','2017-09-18T22:03:36Z',1505783016.048,1505783016.0852,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (99733,'2017-09-13T21:48:16Z','2017-09-13T21:48:16Z',1505350096.629,1505350096.6746,'AA','dd',EE);
-Tempo da insercao: 37.0487 segundos
-Media de memoria: 22126 KiB
-Uso medio da CPU: 37.8267%
+Tempo da insercao: 52.4286 segundos
+Media de memoria: 22901 KiB
+Uso medio da CPU: 42.2184%
 
 Teste no. 3
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (13041,'2017-09-18T22:12:16Z','2017-09-18T22:12:16Z',1505783536.5801,1505783536.6104,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (18405,'2017-09-18T22:02:24Z','2017-09-18T22:02:24Z',1505782944.0659,1505782944.1081,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (23251,'2017-09-18T22:11:59Z','2017-09-18T22:11:59Z',1505783519.2189,1505783519.2645,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (25363,'2017-09-13T21:48:19Z','2017-09-13T21:48:19Z',1505350099.9018,1505350099.9405,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (25580,'2017-09-13T21:48:21Z','2017-09-13T21:48:21Z',1505350101.5966,1505350101.6376,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (33194,'2017-09-13T21:49:39Z','2017-09-13T21:49:39Z',1505350179.4863,1505350179.5337,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (42178,'2017-09-13T21:48:16Z','2017-09-13T21:48:16Z',1505350096.8888,1505350096.929,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (42872,'2017-09-13T21:39:42Z','2017-09-13T21:39:42Z',1505349582.6736,1505349582.7115,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (76206,'2017-09-13T21:48:21Z','2017-09-13T21:48:21Z',1505350101.1618,1505350101.2059,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (86708,'2017-09-13T21:39:43Z','2017-09-13T21:39:43Z',1505349583.7272,1505349583.792,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (91330,'2017-09-13T21:48:18Z','2017-09-13T21:48:18Z',1505350098.4877,1505350098.5397,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (92818,'2017-09-18T22:01:32Z','2017-09-18T22:01:32Z',1505782892.0961,1505782892.136,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (93353,'2017-09-18T22:09:58Z','2017-09-18T22:09:59Z',1505783398.9837,1505783399.0243,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (94854,'2017-09-13T21:48:17Z','2017-09-13T21:48:17Z',1505350097.8603,1505350097.9114,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (95236,'2017-09-13T22:04:30Z','2017-09-13T22:04:30Z',1505351070.7768,1505351070.8285,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (96363,'2017-09-18T22:03:36Z','2017-09-18T22:03:36Z',1505783016.048,1505783016.0852,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (99733,'2017-09-13T21:48:16Z','2017-09-13T21:48:16Z',1505350096.629,1505350096.6746,'AA','dd',EE);
-Tempo da insercao: 39.3673 segundos
-Media de memoria: 12354 KiB
-Uso medio da CPU: 13.8025%
+Tempo da insercao: 56.3864 segundos
+Media de memoria: 22838 KiB
+Uso medio da CPU: 38.8509%
 
 Teste no. 4
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (13041,'2017-09-18T22:12:16Z','2017-09-18T22:12:16Z',1505783536.5801,1505783536.6104,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (18405,'2017-09-18T22:02:24Z','2017-09-18T22:02:24Z',1505782944.0659,1505782944.1081,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (23251,'2017-09-18T22:11:59Z','2017-09-18T22:11:59Z',1505783519.2189,1505783519.2645,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (25363,'2017-09-13T21:48:19Z','2017-09-13T21:48:19Z',1505350099.9018,1505350099.9405,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (25580,'2017-09-13T21:48:21Z','2017-09-13T21:48:21Z',1505350101.5966,1505350101.6376,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (33194,'2017-09-13T21:49:39Z','2017-09-13T21:49:39Z',1505350179.4863,1505350179.5337,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (42178,'2017-09-13T21:48:16Z','2017-09-13T21:48:16Z',1505350096.8888,1505350096.929,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (42872,'2017-09-13T21:39:42Z','2017-09-13T21:39:42Z',1505349582.6736,1505349582.7115,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (76206,'2017-09-13T21:48:21Z','2017-09-13T21:48:21Z',1505350101.1618,1505350101.2059,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (86708,'2017-09-13T21:39:43Z','2017-09-13T21:39:43Z',1505349583.7272,1505349583.792,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (91330,'2017-09-13T21:48:18Z','2017-09-13T21:48:18Z',1505350098.4877,1505350098.5397,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (92818,'2017-09-18T22:01:32Z','2017-09-18T22:01:32Z',1505782892.0961,1505782892.136,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (93353,'2017-09-18T22:09:58Z','2017-09-18T22:09:59Z',1505783398.9837,1505783399.0243,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (94854,'2017-09-13T21:48:17Z','2017-09-13T21:48:17Z',1505350097.8603,1505350097.9114,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (95236,'2017-09-13T22:04:30Z','2017-09-13T22:04:30Z',1505351070.7768,1505351070.8285,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (96363,'2017-09-18T22:03:36Z','2017-09-18T22:03:36Z',1505783016.048,1505783016.0852,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (99733,'2017-09-13T21:48:16Z','2017-09-13T21:48:16Z',1505350096.629,1505350096.6746,'AA','dd',EE);
-Tempo da insercao: 41.2448 segundos
-Media de memoria: 20914 KiB
-Uso medio da CPU: 29.3407%
+Tempo da insercao: 51.7291 segundos
+Media de memoria: 22757 KiB
+Uso medio da CPU: 41.5887%
 
 Teste no. 5
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (13041,'2017-09-18T22:12:16Z','2017-09-18T22:12:16Z',1505783536.5801,1505783536.6104,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (18405,'2017-09-18T22:02:24Z','2017-09-18T22:02:24Z',1505782944.0659,1505782944.1081,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (23251,'2017-09-18T22:11:59Z','2017-09-18T22:11:59Z',1505783519.2189,1505783519.2645,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (25363,'2017-09-13T21:48:19Z','2017-09-13T21:48:19Z',1505350099.9018,1505350099.9405,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (25580,'2017-09-13T21:48:21Z','2017-09-13T21:48:21Z',1505350101.5966,1505350101.6376,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (33194,'2017-09-13T21:49:39Z','2017-09-13T21:49:39Z',1505350179.4863,1505350179.5337,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (42178,'2017-09-13T21:48:16Z','2017-09-13T21:48:16Z',1505350096.8888,1505350096.929,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (42872,'2017-09-13T21:39:42Z','2017-09-13T21:39:42Z',1505349582.6736,1505349582.7115,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (76206,'2017-09-13T21:48:21Z','2017-09-13T21:48:21Z',1505350101.1618,1505350101.2059,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (86708,'2017-09-13T21:39:43Z','2017-09-13T21:39:43Z',1505349583.7272,1505349583.792,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (91330,'2017-09-13T21:48:18Z','2017-09-13T21:48:18Z',1505350098.4877,1505350098.5397,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (92818,'2017-09-18T22:01:32Z','2017-09-18T22:01:32Z',1505782892.0961,1505782892.136,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (93353,'2017-09-18T22:09:58Z','2017-09-18T22:09:59Z',1505783398.9837,1505783399.0243,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (94854,'2017-09-13T21:48:17Z','2017-09-13T21:48:17Z',1505350097.8603,1505350097.9114,'AA','dd',EE);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (95236,'2017-09-13T22:04:30Z','2017-09-13T22:04:30Z',1505351070.7768,1505351070.8285,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (96363,'2017-09-18T22:03:36Z','2017-09-18T22:03:36Z',1505783016.048,1505783016.0852,'AA','dd',ee);
-Erro na execucao da query.
-INSERT INTO public.lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values) VALUES (99733,'2017-09-13T21:48:16Z','2017-09-13T21:48:16Z',1505350096.629,1505350096.6746,'AA','dd',EE);
-Tempo da insercao: 36.4998 segundos
-Media de memoria: 21899 KiB
-Uso medio da CPU: 39.0924%
+Tempo da insercao: 53.4856 segundos
+Media de memoria: 22647 KiB
+Uso medio da CPU: 41.4127%
 
 
-Media global do tempo: 46.5345 segundos
-Media global do uso de memoria: 19238
-Media global do uso de CPU: 26.8675%
+Media global do tempo: 53.7441 segundos
+Media global do uso de memoria: 22575
+Media global do uso de CPU: 40.5893%
