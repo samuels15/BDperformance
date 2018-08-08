@@ -60,7 +60,7 @@ def filtering(registers):       # funcao feita para filtragem dos dados em data
         # Exportando json para csv:
 
         with open('data/uiot.csv', 'wb') as outfile:
-            outfile.write("clientTimef;parameters;serverTime;clientTime;mac;values;serverTimef");
+            # outfile.write("clientTimef;parameters;serverTime;clientTime;mac;values;serverTimef");
             for item in registers:
                 w = csv.DictWriter(outfile, item.keys(), delimiter=';', quotechar='"');
                 w.writerow(item);
