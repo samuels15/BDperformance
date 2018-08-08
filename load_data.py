@@ -23,7 +23,7 @@ def load_uiot(dataSetSize):
 	uiotdata = []
 	with open("data/uiot.csv", "r") as csvfile:
 		file = csv.reader(csvfile, delimiter=';', quotechar='"')
-		next (file)		# skip header
+		next (file)		# skip first register
 		for row in file:
 			if i >= dataSetSize:
 				break
