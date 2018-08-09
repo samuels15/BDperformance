@@ -1,0 +1,78 @@
+Numero de registros: 500000
+Testando Cassandra...
+
+Teste no. 1
+Erro na conexao com o Cassandra
+Media de memoria: 15476 KiB
+Uso medio da CPU: 0.0120%
+
+Teste no. 2
+Erro na conexao com o Cassandra
+Media de memoria: 1437332 KiB
+Uso medio da CPU: 2.1727%
+
+Teste no. 3
+Erro na conexao com o Cassandra
+Media de memoria: 1451936 KiB
+Uso medio da CPU: 0.3431%
+
+Teste no. 4
+Erro na conexao com o Cassandra
+Media de memoria: 1453421 KiB
+Uso medio da CPU: 0.7143%
+
+Teste no. 5
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (0,'2017-09-14T00:55:32Z','2017-09-14T00:55:32Z',1505361332.7736,1505361332.8069,'AA:BB:CC:DD:FA:00','temperature',26.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (15,'2017-09-24T10:55:39Z','2017-09-24T10:55:39Z',1506261339.9371,1506261339.9664,'0013A20040C1A93D','zb_hum',33.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (21,'2017-09-14T00:18:52Z','2017-09-14T00:18:52Z',1505359132.4049,1505359132.439,'AA:BB:CC:DD:FA:00','humidity',33.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (24,'2017-09-28T05:21:26Z','2017-09-28T05:21:26Z',1506586886.476,1506586886.512,'AA:BB:CC:DD:FA:06','hum',0.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (27,'2017-09-27T00:30:09Z','2017-09-27T00:30:09Z',1506483009.6715,1506483009.7093,'AA:BB:CC:DD:FE:42','outlet_cur',0.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (30,'2017-09-12T20:43:31Z','2017-09-12T20:43:31Z',1505259811.2935,1505259811.3476,'AA:BB:CC:DD:FA:00','soil_humidity',30.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (33,'2017-09-12T15:12:05Z','2017-09-12T15:12:05Z',1505239925.3285,1505239925.3537,'0013A20040E2C50D','zb_gas_hum',33.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (36,'2017-09-18T01:50:55Z','2017-09-18T01:50:55Z',1505710255.0826,1505710255.1075,'AA:BB:CC:DD:FA:00','humidity',32.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (45,'2017-09-11T21:27:02Z','2017-09-11T21:27:02Z',1505176022.0472,1505176022.0846,'0013A20040C1A93D','zb_atuador_1',0.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (66,'2017-09-26T18:46:04Z','2017-09-26T18:46:04Z',1506462364.7939,1506462364.8271,'0013A20040C1A93D','zb_atuador_1',0.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (663,'2017-09-14T22:43:57Z','2017-09-14T22:43:57Z',1505439837.1622,1505439837.1905,'AA:BB:CC:DD:FA:00','soil_humidity',33.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (795,'2017-09-18T21:50:09Z','2017-09-18T21:50:09Z',1505782209.2614,1505782209.2938,'AA:BB:CC:DD:FA:00','soil_humidity',34.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (1164,'2017-09-09T05:08:26Z','2017-09-09T05:08:26Z',1504944506.621,1504944506.6543,'AA:BB:CC:DD:FA:00','soil_humidity',42.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (1575,'2017-09-14T09:41:26Z','2017-09-14T09:41:26Z',1505392886.0668,1505392886.0962,'AA:BB:CC:DD:FA:00','temperature',26.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (1836,'2017-09-15T05:14:35Z','2017-09-15T05:14:35Z',1505463275.9463,1505463275.9756,'AA:BB:CC:DD:FA:00','temperature',23.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (4143,'2017-09-28T19:16:58Z','2017-09-28T19:16:58Z',1506637018.2279,1506637018.2492,'0013A20040C1A93D','zb_hum',36.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (4854,'2017-09-27T03:35:31Z','2017-09-27T03:35:31Z',1506494131.2893,1506494131.3384,'0013A20040C1A93D','zb_hum',33.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (4857,'2017-09-13T11:59:29Z','2017-09-13T11:59:29Z',1505314769.8108,1505314769.8402,'AA:BB:CC:DD:FA:00','soil_humidity',33.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (13623,'2017-09-28T20:00:26Z','2017-09-28T20:00:26Z',1506639626.7764,1506639626.818,'AA:BB:CC:DD:FA:00','soil_humidity',76.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (16074,'2017-09-18T03:27:10Z','2017-09-18T03:27:10Z',1505716030.9307,1505716030.9609,'AA:BB:CC:DD:FA:00','soil_humidity',34.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (16716,'2017-09-17T12:11:54Z','2017-09-17T12:11:54Z',1505661114.4948,1505661114.5272,'AA:BB:CC:DD:FA:00','soil_humidity',33.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (324633,'2017-09-16T07:00:36Z','2017-09-16T07:00:36Z',1505556036.575,1505556036.603,'AA:BB:CC:DD:FA:00','humidity',33.0);
+Erro na execucao da query.
+INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (381562,'2017-09-13T04:39:14Z','2017-09-13T04:39:14Z',1505288354.7538,1505288354.7806,'AA:BB:CC:DD:FA:00','soil_humidity',32.0);
+Tempo da insercao: 5251.6579 segundos
+Media de memoria: 0 KiB
+Uso medio da CPU: 0.0000%
+
+
+Media global do tempo: 5251.6579 segundos
+Media global do uso de memoria: 871633
+Media global do uso de CPU: 0.6484%
