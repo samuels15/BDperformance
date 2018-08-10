@@ -22,9 +22,9 @@ def cassandra_select(tablename):
 		print ("End time = "+ time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)));
 		print ("Total time: "+ str(end-start) + " seconds.");
 		count = 0
-		for item in results:
-			count+=1
-			print (count)
+		# for item in results:
+			# count+=1
+			# print (count)
 			# print (item.id)
 		print (count)
 		cluster.shutdown();

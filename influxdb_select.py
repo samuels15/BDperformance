@@ -8,18 +8,20 @@ def influx_select(tablename):
 	try:
 		conn = InfluxDBClient(host='localhost',port=8086, username='root',password='root',database='tg1');
 	except:
-		print("Erro: Impossivel conectar com o InfluxDB")
+		print ("Erro: Impossivel conectar com o InfluxDB")
 		sys.exit(0)
 
 	try:
+		query = "SELECT COUNT(id) FROM "+tablename;
+		print query;
 		start = time.time();
-		# print("Start time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start)))
-		result = conn.query("SELECT COUNT(id) FROM "+tablename);
+		print("Start time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start)))
+		result = conn.query(query);
 		end = time.time()
-		# print("End time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)))
+		print("End time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)))
 		print("Total time: " + str(end-start) + " seconds.")
-		print ("Result:")
-		print (result)
+		# print ("Result:")
+		# print (result)
 		retorno.append(end-start)
 		return end-start
 	except:
@@ -27,4 +29,4 @@ def influx_select(tablename):
 		pass
 
 retorno = []
-influx_select();
+influx_select ('lab')
