@@ -3,7 +3,7 @@ import psycopg2
 from datetime import datetime
 import time
 
-def pg_insert(tablename):
+def pg_select(tablename):
 	try:
 	    conn=psycopg2.connect(	dbname='tg1', 		\
 	    						host='localhost', 	\
@@ -16,11 +16,16 @@ def pg_insert(tablename):
 
 	cur = conn.cursor()
 	try:
+		query = "SELECT COUNT(id) FROM "+ tablename;
+		print (query);
 		start = time.time()
 		# print("Start time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start)))
-		result= cur.execute("SELECT COUNT(id) FROM "+tablename)
+		cur.execute(query)
 		end = time.time()
 		# print("End time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)))
+		rows = cur.fetchall();
+		for item in rows:
+			print (item[0]);
 		print("Total time: " + str(end-start) + " seconds.")
 		cur.close()
 		conn.close()

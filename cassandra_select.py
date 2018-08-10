@@ -11,21 +11,23 @@ def cassandra_select(tablename):
 	except:
 		print "Erro na conexao com o Cassandra";
 		sys.exit(0)
-	# try:
-	# 	session.execute('TRUNCATE lab');
-	# except:
-	# 	pass;
-	# #	print ("Cassandra: Erro no truncate");
-	# #	print ("Prosseguindo com a insercao...");
 
 	try:
+		query = "SELECT id FROM " + tablename;
+		print query
 		start = time.time();
-		# print ("Start time = "+ time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start)))
-		result = conn.query("SELECT COUNT(id) FROM "+tablename);
+		print ("Start time = "+ time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start)))
+		results = session.execute(query);
 		end = time.time();
-		# print ("End time = "+ time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)));
+		print ("End time = "+ time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)));
 		print ("Total time: "+ str(end-start) + " seconds.");
-		cluster.shutdown()
+		count = 0
+		for item in results:
+			count+=1
+			print (count)
+			# print (item.id)
+		print (count)
+		cluster.shutdown();
 		retorno.append(end-start)
 		return (end-start)
 	except:

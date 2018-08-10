@@ -14,11 +14,12 @@ def cassandra_insert(registers):
 	except:
 		print "Erro na conexao com o Cassandra";
 		sys.exit(0)
-	# try:
-	# 	session.execute('TRUNCATE lab');
-	# except:
-	# 	print ("Cassandra: Erro no truncate");
-	# 	print ("Prosseguindo com a insercao...");
+	try:
+		session.execute('TRUNCATE lab');
+	except:
+		pass;
+	#	print ("Cassandra: Erro no truncate");
+	#	print ("Prosseguindo com a insercao...");
 
 	try:
 		start = time.time();
