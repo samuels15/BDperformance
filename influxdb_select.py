@@ -6,7 +6,7 @@ import sys
 
 def influx_select(tablename):
 	try:
-		conn = InfluxDBClient(host='localhost',port=8086, username='root',password='root',database='tg1');
+		conn = InfluxDBClient(host='192.168.15.92',port=8086, username='root',password='root',database='tg1');
 	except:
 		print ("Erro: Impossivel conectar com o InfluxDB")
 		sys.exit(0)
