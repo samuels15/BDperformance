@@ -1,36 +1,32 @@
-Numero de registros: 1000
+Numero de registros: 100
 Testando Cassandra...
 
 Teste no. 1
-Tempo da insercao: 10.3053 segundos
-Media de memoria: 1396197 KiB
-Uso medio da CPU: 29.9144%
+Tempo da insercao: 0.8744 segundos
+Media de memoria: 1550273 KiB
+Uso medio da CPU: 8.3043%
 
 Teste no. 2
-Erro na execucao da query.
-INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (800,'2017-09-23T07:53:31Z','2017-09-23T07:53:31Z',1506164011.0206,1506164011.0408,'0013A20040C1A93D','zb_hum',34.0);
-Erro na execucao da query.
-INSERT INTO lab (id, clientTimef, serverTimef, clientTime, serverTime, mac, parameters, values)  VALUES (905,'2017-09-19T18:15:24Z','2017-09-19T18:15:24Z',1505855724.6944,1505855724.7573,'AA:BB:CC:DD:FE:42','outlet_pow',0.0);
-Tempo da insercao: 48.7429 segundos
-Media de memoria: 1402510 KiB
-Uso medio da CPU: 6.8722%
+Tempo da insercao: 0.3254 segundos
+Media de memoria: 1548876 KiB
+Uso medio da CPU: 2.3276%
 
 Teste no. 3
-Tempo da insercao: 7.2406 segundos
-Media de memoria: 1403259 KiB
-Uso medio da CPU: 17.9662%
+Tempo da insercao: 0.2398 segundos
+Media de memoria: 1549161 KiB
+Uso medio da CPU: 3.2275%
 
 Teste no. 4
-Tempo da insercao: 7.8990 segundos
-Media de memoria: 1407087 KiB
-Uso medio da CPU: 21.9740%
+Tempo da insercao: 0.3077 segundos
+Media de memoria: 1549184 KiB
+Uso medio da CPU: 2.7096%
 
 Teste no. 5
-Tempo da insercao: 7.2694 segundos
-Media de memoria: 1408556 KiB
-Uso medio da CPU: 13.3459%
+Tempo da insercao: 0.3341 segundos
+Media de memoria: 1549184 KiB
+Uso medio da CPU: 2.7225%
 
 
-Media global do tempo: 16.2914 segundos
-Media global do uso de memoria: 1403521
-Media global do uso de CPU: 18.0146%
+Media global do tempo: 0.4163 segundos
+Media global do uso de memoria: 1549335
+Media global do uso de CPU: 3.8583%

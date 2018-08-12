@@ -20,15 +20,15 @@
 #python importw.py 500000 4 > results_lab/500k/mongo.txt
 
 echo "Iniciando script"
-python importw.py 1000 1 > results_lab/pg.txt
+python importw.py 100 1 > results_lab/pg.txt
 echo "Pg terminado."
 sleep 60
-python importw.py 1000 2 > results_lab/influx.txt
+python importw.py 100 2 > results_lab/influx.txt
 echo "Influx terminado."
 sleep 60
-python importw.py 1000 3 > results_lab/cassandra.txt
+python importw.py 100 3 > results_lab/cassandra.txt
 echo "Cassandra terminado."
 sleep 60
-python importw.py 1000 4 > results_lab/mongo.txt
+python importw.py 100 4 > results_lab/mongo.txt
 echo "Mongo terminado"
 echo "Fim do script"
