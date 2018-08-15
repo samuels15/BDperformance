@@ -23,15 +23,15 @@ def mkjson_object(register):
 	return {
 		"measurement": "lab",
 		"tags": {
+			"id": register.id,
 			"mac": register.mac,
+			"parameters":register.parameters,
 		},
 		"time": register.clientTimef.strftime("%Y-%m-%dT%H:%M:%SZ"),
 		"fields": {
-			"id": register.id,
 			"clientTime":register.clientTime,
 			"serverTime":register.serverTime,
 			"serverTimef":register.serverTimef.strftime("%Y-%m-%dT%H:%M:%SZ"),
-			"parameters":register.parameters,
-			"values":register.values
+			"value":register.values
 		}
 	}

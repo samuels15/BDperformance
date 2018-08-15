@@ -33,7 +33,8 @@ def pg_insert(registers):
 				cur.execute(query)
 			except:
 				print ("Erro na execucao da query.")
-				print (query)
+				with open("erros/pg.txt", "a") as outfile:
+					out.write(query)
 				conn.rollback();
 		conn.commit()
 		end = time.time()
