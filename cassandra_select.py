@@ -4,7 +4,7 @@ from datetime import datetime
 import time
 import sys
 
-def cassandra_select(tablename):
+def cassandra_select(query):
 	try:
 		cluster = Cluster(['192.168.15.93','192.168.15.92','192.168.15.94']);	 # conectando ao cassandra no localhost 127.0.0.1
 		session = cluster.connect('tg1');
@@ -13,8 +13,6 @@ def cassandra_select(tablename):
 		sys.exit(0)
 
 	try:
-		# query = "select parameters, count(*) from lab group by parameters";
-		query = "SELECT COUNT(*) FROM lab"
 		print query
 		start = time.time();
 		print ("Start time = "+ time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start)))

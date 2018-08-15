@@ -15,12 +15,14 @@ def main():
 						+'\n0. Cancelar e sair.\n');
 	if (str(opt)=='1'):
 		print ("Testando PostgreSQL...");
-		pg_select()
+		query = "SELECT COUNT(*) FROM lab;"
+		pg_select(query)
 	if (str(opt)=='2'):
 		print ("Testando InfluxDB...");
 		influx_select()
 	if (str(opt)=='3'):
 		print ("Testando Cassandra...");
-		cassandra_select("lab")
+		query = "SELECT COUNT(*) FROM lab"
+		cassandra_select(query)
 
 main()

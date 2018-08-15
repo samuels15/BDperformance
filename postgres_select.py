@@ -3,7 +3,7 @@ import psycopg2
 from datetime import datetime
 import time
 
-def pg_select():
+def pg_select(query):
 	try:
 	    conn=psycopg2.connect(	dbname='tg1', 		\
   						host='localhost', 	\
@@ -16,8 +16,6 @@ def pg_select():
 
 	cur = conn.cursor()
 	try:
-		# query = "SELECT parameters, COUNT(id) FROM lab GROUP BY parameters;";
-		query = "SELECT COUNT(*) FROM lab;"
 		print (query);
 		start = time.time()
 		# print("Start time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start)))
@@ -25,8 +23,8 @@ def pg_select():
 		end = time.time()
 		# print("End time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)))
 		rows = cur.fetchall();
-		for item in rows:
-			print (item[0]);
+		# for item in rows:
+		# 	print (item[0]);
 		print("Total time: " + str(end-start) + " seconds.")
 		cur.close()
 		conn.close()
