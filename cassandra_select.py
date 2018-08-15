@@ -13,7 +13,8 @@ def cassandra_select(tablename):
 		sys.exit(0)
 
 	try:
-		query = "SELECT id FROM " + tablename;
+		# query = "select parameters, count(*) from lab group by parameters";
+		query = "SELECT COUNT(*) FROM lab"
 		print query
 		start = time.time();
 		print ("Start time = "+ time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start)))
@@ -21,12 +22,8 @@ def cassandra_select(tablename):
 		end = time.time();
 		print ("End time = "+ time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)));
 		print ("Total time: "+ str(end-start) + " seconds.");
-		count = 0
-		# for item in results:
-			# count+=1
-			# print (count)
-			# print (item.id)
-		print (count)
+		print (results[0].count);
+		# print (count)
 		cluster.shutdown();
 		retorno.append(end-start)
 		return (end-start)

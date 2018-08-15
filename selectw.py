@@ -15,10 +15,10 @@ def main():
 						+'\n0. Cancelar e sair.\n');
 	if (str(opt)=='1'):
 		print ("Testando PostgreSQL...");
-		pg_select("lab")
+		pg_select()
 	if (str(opt)=='2'):
 		print ("Testando InfluxDB...");
-		influx_select("lab")
+		influx_select()
 	if (str(opt)=='3'):
 		print ("Testando Cassandra...");
 		cassandra_select("lab")

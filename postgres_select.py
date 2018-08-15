@@ -3,20 +3,21 @@ import psycopg2
 from datetime import datetime
 import time
 
-def pg_select(tablename):
+def pg_select():
 	try:
 	    conn=psycopg2.connect(	dbname='tg1', 		\
-	    						host='localhost', 	\
-	    						port='5432', 		\
-	    						user='postgres', 	\
-	    						password='200695')
+  						host='localhost', 	\
+    						port='5432', 		\
+    						user='postgres', 	\
+    						password='200695')
 	except:
-		print("Erro: Impossivel conectar com o Postgre.\n")
+		print("Erro: Impossivel conectar com o PostgreSQL.\n")
 		sys.exit(0)
 
 	cur = conn.cursor()
 	try:
-		query = "SELECT COUNT(id) FROM "+ tablename;
+		# query = "SELECT parameters, COUNT(id) FROM lab GROUP BY parameters;";
+		query = "SELECT COUNT(*) FROM lab;"
 		print (query);
 		start = time.time()
 		# print("Start time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start)))

@@ -1,10 +1,10 @@
 from influxdb import InfluxDBClient
 from datetime import datetime
-#from make_json import mkjson_object
+# from make_json import mkjson_object
 import time
 import sys
 
-def influx_select(tablename):
+def influx_select():
 	try:
 		conn = InfluxDBClient(host='192.168.15.92',port=8086, username='root',password='root',database='tg1');
 	except:
@@ -12,7 +12,7 @@ def influx_select(tablename):
 		sys.exit(0)
 
 	try:
-		query = "SELECT COUNT(id) FROM "+tablename;
+		query = "SELECT COUNT(id) FROM lab";
 		print query;
 		start = time.time();
 		print("Start time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start)))
@@ -20,8 +20,8 @@ def influx_select(tablename):
 		end = time.time()
 		print("End time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)))
 		print("Total time: " + str(end-start) + " seconds.")
-		# print ("Result:")
-		# print (result)
+		# print ("Result:");
+		# print (result);
 		retorno.append(end-start)
 		return end-start
 	except:
@@ -29,4 +29,4 @@ def influx_select(tablename):
 		pass
 
 retorno = []
-influx_select ('lab')
+
