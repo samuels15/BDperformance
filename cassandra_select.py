@@ -15,13 +15,12 @@ def cassandra_select(query):
 	try:
 		print query
 		start = time.time();
-		print ("Start time = "+ time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start)))
+		# print ("Start time = "+ time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start)))
 		results = session.execute(query);
 		end = time.time();
-		print ("End time = "+ time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)));
+		# print ("End time = "+ time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)));
 		print ("Total time: "+ str(end-start) + " seconds.");
-		print (results[0].count);
-		# print (count)
+		# print (results[0].count);
 		cluster.shutdown();
 		retorno.append(end-start)
 		return (end-start)
