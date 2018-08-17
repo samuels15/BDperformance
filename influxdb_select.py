@@ -4,7 +4,7 @@ from datetime import datetime
 import time
 import sys
 
-def influx_select():
+def influx_select(query):
 	try:
 		conn = InfluxDBClient(host='192.168.15.92',port=8086, username='root',password='root',database='tg1');
 	except:
@@ -12,21 +12,19 @@ def influx_select():
 		sys.exit(0)
 
 	try:
-		query = "SELECT COUNT(id) FROM lab";
-		print query;
-		start = time.time();
-		print("Start time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start)))
-		result = conn.query(query);
-		end = time.time()
-		print("End time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)))
-		print("Total time: " + str(end-start) + " seconds.")
-		# print ("Result:");
-		# print (result);
-		retorno.append(end-start)
-		return end-start
+	 	start = time.time();
+	 	print("Start time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start)))
+	 	result = conn.query(query);
+	 	end = time.time()
+	 	print("End time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)))
+	 	print("Total time: " + str(end-start) + " seconds.")
+	 	# print ("Result:");
+	 	# print (result);
+	 	retorno.append(end-start)
+	 	return end-start
 	except:
-		print("InfluxDB: Select falhou");
-		pass
+	 	print("InfluxDB: Select falhou");
+	 	pass
+	# result = conn.query(query)
 
 retorno = []
-
