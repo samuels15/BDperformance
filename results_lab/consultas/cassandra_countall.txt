@@ -1,0 +1,42 @@
+Testando Cassandra...
+SELECT COUNT(*) FROM lab
+
+Teste no. 1
+SELECT COUNT(*) FROM lab
+Total time: 5.44290804863 seconds.
+Tempo da consulta: 5.4429 segundos
+Media de memoria: 1474509 KiB
+Uso medio da CPU: 14.4200%
+
+Teste no. 2
+SELECT COUNT(*) FROM lab
+Total time: 1.89468216896 seconds.
+Tempo da consulta: 1.8947 segundos
+Media de memoria: 1474632 KiB
+Uso medio da CPU: 9.3757%
+
+Teste no. 3
+SELECT COUNT(*) FROM lab
+Total time: 1.51885890961 seconds.
+Tempo da consulta: 1.5189 segundos
+Media de memoria: 1475061 KiB
+Uso medio da CPU: 12.4234%
+
+Teste no. 4
+SELECT COUNT(*) FROM lab
+Total time: 1.54187893867 seconds.
+Tempo da consulta: 1.5419 segundos
+Media de memoria: 1475128 KiB
+Uso medio da CPU: 11.8809%
+
+Teste no. 5
+SELECT COUNT(*) FROM lab
+Total time: 1.38492202759 seconds.
+Tempo da consulta: 1.3849 segundos
+Media de memoria: 1475128 KiB
+Uso medio da CPU: 6.3072%
+
+
+Media global do tempo: 2.3567 segundos
+Media global do uso de memoria: 1474891
+Media global do uso de CPU: 10.8814%

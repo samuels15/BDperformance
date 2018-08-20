@@ -1,0 +1,47 @@
+Testando InfluxDB...
+SELECT COUNT(clientTime) FROM lab
+
+Teste no. 1
+Start time = 19/08/2018 13:08:58
+End time = 19/08/2018 13:15:56
+Total time: 417.321361065 seconds.
+Tempo da consulta: 417.3214 segundos
+Media de memoria: 434154 KiB
+Uso medio da CPU: 4.3865%
+
+Teste no. 2
+Start time = 19/08/2018 13:17:00
+End time = 19/08/2018 13:39:07
+Total time: 1326.86129117 seconds.
+Tempo da consulta: 1326.8613 segundos
+Media de memoria: 481758 KiB
+Uso medio da CPU: 3.2266%
+
+Teste no. 3
+Start time = 19/08/2018 13:40:11
+End time = 19/08/2018 14:04:07
+Total time: 1436.76502395 seconds.
+Tempo da consulta: 1436.7650 segundos
+Media de memoria: 484797 KiB
+Uso medio da CPU: 2.9039%
+
+Teste no. 4
+Start time = 19/08/2018 14:05:13
+End time = 19/08/2018 14:30:02
+Total time: 1488.62350297 seconds.
+Tempo da consulta: 1488.6235 segundos
+Media de memoria: 483252 KiB
+Uso medio da CPU: 2.9827%
+
+Teste no. 5
+Start time = 19/08/2018 14:31:05
+End time = 19/08/2018 14:57:31
+Total time: 1585.88530302 seconds.
+Tempo da consulta: 1585.8853 segundos
+Media de memoria: 485091 KiB
+Uso medio da CPU: 2.7199%
+
+
+Media global do tempo: 1251.0913 segundos
+Media global do uso de memoria: 473810
+Media global do uso de CPU: 3.2439%

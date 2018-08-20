@@ -1,0 +1,42 @@
+Testando PostgreSQL...
+SELECT COUNT(*) FROM lab;
+
+Teste no. 1
+SELECT COUNT(*) FROM lab;
+Total time: 29.1013801098 seconds.
+Tempo da consulta: 29.1014 segundos
+Media de memoria: 14847 KiB
+Uso medio da CPU: 0.4035%
+
+Teste no. 2
+SELECT COUNT(*) FROM lab;
+Total time: 0.0348379611969 seconds.
+Tempo da consulta: 0.0348 segundos
+Media de memoria: 6776 KiB
+Uso medio da CPU: 0.0000%
+
+Teste no. 3
+SELECT COUNT(*) FROM lab;
+Total time: 0.0969221591949 seconds.
+Tempo da consulta: 0.0969 segundos
+Media de memoria: 4964 KiB
+Uso medio da CPU: 1.4143%
+
+Teste no. 4
+SELECT COUNT(*) FROM lab;
+Total time: 0.0384500026703 seconds.
+Tempo da consulta: 0.0385 segundos
+Media de memoria: 208 KiB
+Uso medio da CPU: 0.0000%
+
+Teste no. 5
+SELECT COUNT(*) FROM lab;
+Total time: 0.523999929428 seconds.
+Tempo da consulta: 0.5240 segundos
+Media de memoria: 7657 KiB
+Uso medio da CPU: 2.2111%
+
+
+Media global do tempo: 5.9591 segundos
+Media global do uso de memoria: 6890
+Media global do uso de CPU: 0.8058%
