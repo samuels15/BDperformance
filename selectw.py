@@ -15,7 +15,7 @@ def main():
 						#+'\n4. MongoDB'  \
 						+'\n0. Cancelar e sair.\n');
 	if (str(opt)=='1'):
-		query = "SELECT COUNT(*) FROM lab;"
+		query = "SELECT parameters, COUNT(*) FROM lab GROUP BY parameters;"
 		# query = "SELECT EXTRACT(MONTH FROM clienttimef), parameters, AVG(values) FROM lab group by 1, 2;"
 		print ("Testando PostgreSQL...");
 		print query;
@@ -61,7 +61,7 @@ def main():
 
 	if (str(opt)=='2'):
 		print ("Testando InfluxDB...");
-		query = "SELECT COUNT(clientTime) FROM lab";
+		query="SELECT COUNT(clientTime) FROM lab GROUP BY parameters;"
 		print query;
 		for i in range(5):
 			print ("\n" + "Teste no. "+str(i+1));
@@ -105,7 +105,7 @@ def main():
 
 
 	if (str(opt)=='3'):
-		query = "SELECT COUNT(*) FROM lab"
+		query = "SELECT parameters, COUNT(*) FROM lab GROUP BY parameters;";
 		print ("Testando Cassandra...");
 		print query
 		for i in range(5):

@@ -1,0 +1,42 @@
+Testando Cassandra...
+SELECT parameters, COUNT(*) FROM lab GROUP BY parameters;
+
+Teste no. 1
+SELECT parameters, COUNT(*) FROM lab GROUP BY parameters;
+Total time: 1.69306397438 seconds.
+Tempo da consulta: 1.6931 segundos
+Media de memoria: 1461197 KiB
+Uso medio da CPU: 9.4736%
+
+Teste no. 2
+SELECT parameters, COUNT(*) FROM lab GROUP BY parameters;
+Total time: 1.46293282509 seconds.
+Tempo da consulta: 1.4629 segundos
+Media de memoria: 1461803 KiB
+Uso medio da CPU: 3.6661%
+
+Teste no. 3
+SELECT parameters, COUNT(*) FROM lab GROUP BY parameters;
+Total time: 1.38479995728 seconds.
+Tempo da consulta: 1.3848 segundos
+Media de memoria: 1462064 KiB
+Uso medio da CPU: 13.3667%
+
+Teste no. 4
+SELECT parameters, COUNT(*) FROM lab GROUP BY parameters;
+Total time: 1.3818218708 seconds.
+Tempo da consulta: 1.3818 segundos
+Media de memoria: 1462161 KiB
+Uso medio da CPU: 9.9891%
+
+Teste no. 5
+SELECT parameters, COUNT(*) FROM lab GROUP BY parameters;
+Total time: 1.39567708969 seconds.
+Tempo da consulta: 1.3957 segundos
+Media de memoria: 1462164 KiB
+Uso medio da CPU: 10.1298%
+
+
+Media global do tempo: 1.4637 segundos
+Media global do uso de memoria: 1461877
+Media global do uso de CPU: 9.3251%
