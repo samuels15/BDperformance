@@ -1,0 +1,42 @@
+Testando PostgreSQL...
+SELECT parameters, COUNT(*) FROM lab GROUP BY parameters;
+
+Teste no. 1
+SELECT parameters, COUNT(*) FROM lab GROUP BY parameters;
+Total time: 0.606420040131 seconds.
+Tempo da consulta: 0.6064 segundos
+Media de memoria: 12952 KiB
+Uso medio da CPU: 5.0000%
+
+Teste no. 2
+SELECT parameters, COUNT(*) FROM lab GROUP BY parameters;
+Total time: 0.11176609993 seconds.
+Tempo da consulta: 0.1118 segundos
+Media de memoria: 15268 KiB
+Uso medio da CPU: 0.0000%
+
+Teste no. 3
+SELECT parameters, COUNT(*) FROM lab GROUP BY parameters;
+Total time: 0.14751791954 seconds.
+Tempo da consulta: 0.1475 segundos
+Media de memoria: 14692 KiB
+Uso medio da CPU: 0.0000%
+
+Teste no. 4
+SELECT parameters, COUNT(*) FROM lab GROUP BY parameters;
+Total time: 0.111919879913 seconds.
+Tempo da consulta: 0.1119 segundos
+Media de memoria: 15268 KiB
+Uso medio da CPU: 0.0000%
+
+Teste no. 5
+SELECT parameters, COUNT(*) FROM lab GROUP BY parameters;
+Total time: 0.106260061264 seconds.
+Tempo da consulta: 0.1063 segundos
+Media de memoria: 15268 KiB
+Uso medio da CPU: 0.0000%
+
+
+Media global do tempo: 0.2168 segundos
+Media global do uso de memoria: 14689
+Media global do uso de CPU: 1.0000%
