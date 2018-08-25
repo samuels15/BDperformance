@@ -1,0 +1,29 @@
+
+-- PostgreSQL:
+SELECT siteID, detResult
+FROM public.walesTemperature
+WHERE timeTag BETWEEN '2004-01-01' AND '2004-01-31';
+
+SELECT COUNT(*) FROM lab WHERE clientTimef > '2017-08-01' AND clientTimef < '2017-08-07';
+
+-- Cassandra:
+USE tg1;
+SELECT siteID, detResult
+FROM temperature
+WHERE timetag>'2004-01-01'
+	AND timetag < '2004-01-31' ALLOW FILTERING;
+
+SELECT COUNT(*) FROM lab WHERE clientTimef > '2017-08-01' AND clientTimef < '2017-08-07'
+
+-- MongoDB:
+
+
+-- InfluxDB:
+EXEMPLO: SELECT "water_level","location" FROM "h2o_feet" WHERE time >= '2015-08-18T00:00:00Z' AND time <= '2015-08-18T00:30:00Z'
+
+SELECT siteID, detResult
+FROM temperature
+WHERE timetag > '2004-01-01'
+	AND timetag < '2004-01-31'
+
+SELECT COUNT(*) FROM lab WHERE clientTimef > '2017-08-01' AND clientTimef > '2017-08-07'

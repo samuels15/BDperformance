@@ -31,7 +31,7 @@ def main():
 
 	if (str(opt)=='1'):
 		print ("Testando PostgreSQL...");
-		for i in range(5):
+		for i in range(1):
 			print ("\n" + "Teste no. "+str(i+1));
 			try:
 				t1=threading.Thread(target=pg_insert, args=([uiot]));
@@ -66,7 +66,7 @@ def main():
 			print ("Media global do uso de CPU: %.4f%%"   % (sum(cpu_avg)/len(cpu_avg)));
 	elif (str(opt)=='2'):
 		print ("Testando InfluxDB...");
-		for i in range(5):
+		for i in range(1):
 			print ("\n"+"Teste no. "+str(i+1));
 			try:
 				t1=threading.Thread(target=influx_insert, args=([uiot]));
@@ -101,7 +101,7 @@ def main():
 			print ("Media global do uso de CPU: %.4f%%"   % (sum(cpu_avg)/len(cpu_avg)));
 	elif (str(opt)=='3'):
 		print ("Testando Cassandra...");
-		for i in range(5):
+		for i in range(1):
 			print ("\n"+"Teste no. "+str(i+1));
 			try:
 				t1=threading.Thread(target=cassandra_insert, args=([uiot]));
