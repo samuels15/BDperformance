@@ -34,26 +34,33 @@ from couchbase.bucket import Bucket
 
 
 def couchbase_insert(registers):
-
+	raw_input ("CheckSegFault3. Enter...")
 	# Conectando ao banco
 	try:
 		adm = Admin('samuel', 'samuel', host='127.0.0.1', port=8091);
 	except:
 		print "Erro na conexao com o Couchbase";
 		sys.exit(0)
+	raw_input("CheckSegFault4. Enter...")
 
 	# recriando o bucket
 	try:
 		adm.bucket_remove('tg1');
+		raw_input("CheckSegFault5. Enter...");
 		adm.bucket_create('tg1',
 				  bucket_type='couchbase',
 				  bucket_password='samuel',
 				  flush_enabled=True);
-
-		cb = bucket('couchbase://127.0.0.1/tg1',username='samuel', password='samuel');	 # conectando ao couchbase no localhost 127.0.0.1
-		# Testar: cb = Bucket('couchbase://10.0.2.9,10.0.2.10,10.0.2.11/tg1');
+		raw_input("CheckSegFault6. Enter...");
 	except:
 		print "Couchbase: Erro resetando o bucket";
+
+	try:
+		sleep(10);
+		cb = Bucket('couchbase://127.0.0.1/tg1',username='samuel', password='samuel');	 # conectando ao couchbase no localhost 127.0.0.1
+		# Testar: cb = Bucket('couchbase://10.0.2.9,10.0.2.10,10.0.2.11/tg1');
+	except:
+		print "Couchbase: Erro de conexao ao Bucket.";
 		sys.exit(0)
 
 	try:
