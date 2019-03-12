@@ -48,7 +48,7 @@ def couchbase_insert(registers):
 		adm.bucket_create('tg1',
 				  bucket_type='couchbase',
 				  bucket_password='samuel',
-				  flush_enabled='true');
+				  flush_enabled=True);
 
 		cb = bucket('couchbase://127.0.0.1/tg1',username='samuel', password='samuel');	 # conectando ao couchbase no localhost 127.0.0.1
 		# Testar: cb = Bucket('couchbase://10.0.2.9,10.0.2.10,10.0.2.11/tg1');
@@ -59,12 +59,16 @@ def couchbase_insert(registers):
 	try:
 		# comecar a contar o tempo e inserir os dados no couchbase
 		start = time.time();
+		print("Start time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(start)))
 		for item in registers:
+			print repr(item) +'\n'
 			try:
 				cb.upsert(item.id, {'mac': item.mac, 'clientTime': item.clientTime,	'values':item.values,	'parameters':item.parameters,	'serverTime':item.serverTime,	'serverTimef':item.serverTimef.strftime("%Y-%m-%dT%H:%M:%SZ"),	'clientTimef':item.clientTimef.strftime("%Y-%m-%dT%H:%M:%SZ")}, format=couchbase.FMT_JSON);
 			except:
 				print ("Erro inserindo registro no Couchbase.");
 		end = time.time();
+		print("End time = " + time.strftime("%d/%m/%Y %H:%M:%S", time.localtime(end)))
+		print("Total time: " + str(end-start) + " seconds.")
 		return (end-start);
 	except:
 		print "Erro no Couchbase.";
