@@ -24,6 +24,7 @@ def main():
 						+'\n2. InfluxDB'
 						+'\n3. Cassandra'
 						+'\n4. MongoDB'
+						+'\n5. Couchbase'
 						+'\n0. Cancelar e sair.\n')
 	uiot = load_uiot(dataSetSize)
 	# uiot = load_uiot(100)
