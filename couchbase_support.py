@@ -57,7 +57,7 @@ def couchbase_insert(registers):
 		sys.exit(0)
 
 	try:
-		# começar a contar o tempo e inserir os dados no couchbase
+		# comecar a contar o tempo e inserir os dados no couchbase
 		start = time.time();
 		for item in registers:
 			try:
