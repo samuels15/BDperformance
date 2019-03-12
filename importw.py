@@ -4,6 +4,7 @@ from postgres_insert import pg_insert, retorno as avg_pstg
 from influxdb_insert import influx_insert, retorno as avg_iflx
 from cassandra_insert import cassandra_insert, retorno as avg_cass
 from mongo_insert import mongo_insert, retorno as avg_mong
+from couchbase_support import couchbase_insert
 from monitor import monitor, mem, cpu
 import threading
 import time
@@ -169,6 +170,15 @@ def main():
 			print ("Media global do uso de memoria: %.0f" % (sum(mem_avg)/len(mem_avg)));
 		if cpu_avg:
 			print ("Media global do uso de CPU: %.4f%%"   % (sum(cpu_avg)/len(cpu_avg)));
+	elif (str(opt)=='5'):
+		print ("Testando Couchbase...");
+		for i in range(5):
+			print ("\n"+"Teste no. "+str(i+1));
+			try:
+				couchbase_insert(uiot)
+			except:
+				print ("Couchbase: Erro na main.")
+		print ("Fim do teste do Couchbase");
 
 	elif (str(opt)=='0'):
 		pass
