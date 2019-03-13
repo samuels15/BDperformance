@@ -176,10 +176,35 @@ def main():
 		for i in range(5):
 			print ("\n"+"Teste no. "+str(i+1));
 			try:
-				couchbase_insert(uiot)
+				t1=threading.Thread(target=couchbase_insert, args([uiot]));
+				t2=threading.Thread(target=monitor, args=(["memcached"]));
+				t1.start();
+				t2.start();
+				while t1.isAlive():
+					pass;
+				t2.do_run = False;
+				while t2.isAlive():
+					pass;
+				if (avg_couch):
+					print ("Tempo da insercao: %.4f segundos" % avg_couch[-1]);
+				if (mem):
+					mem_avg.append(sum(mem)/len(mem))
+					print ("Media de memoria: %.0f KiB" % (sum(mem)/len(mem)));
+					del mem[:];	# limpando as aquisicoes dessa repeticao
+				if (cpu):
+					cpu_avg.append(sum(cpu)/len(cpu))
+					print ("Uso medio da CPU: %.4f%%" % (sum(cpu)/len(cpu)));
+					del cpu[:];	# limpando as aquisicoes dessa repeticao
 			except:
-				print ("Couchbase: Erro na main.")
-		print ("Fim do teste do Couchbase");
+				print ("Couchbase: Erro no threading.")
+			time.sleep(60)		# Pausa de um minuto antes da proxima bateria de testes
+		print ('\n');
+		if(avg_couch):
+			print ("Media global do tempo: %.4f segundos" % (sum(avg_couch)/len(avg_couch)));
+		if mem_avg:
+			print ("Media global do uso de memoria: %.0f" % (sum(mem_avg)/len(mem_avg)));
+		if cpu_avg:
+			print ("Media global do uso de CPU: %.4f%%"   % (sum(cpu_avg)/len(cpu_avg)));
 
 	elif (str(opt)=='0'):
 		pass

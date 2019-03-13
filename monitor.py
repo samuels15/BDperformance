@@ -29,7 +29,7 @@ def get_memory_percent(name):
 def get_memory_usage(name):
 	try:
 		# return the memory usage in percentage like top
-		process = psutil.Process(getpid(name));
+		process = psutil.Process(getpidbycmd(name));
 		# mem = process.memory_percent()
 		# return mem
 		return (process.memory_info().rss)/1024
@@ -38,7 +38,7 @@ def get_memory_usage(name):
 
 def get_cpu_usage(name):
 	try:
-		process = psutil.Process(getpid(name));
+		process = psutil.Process(getpidbycmd(name));
 		return (process.cpu_percent(interval=0.1));
 	except:
 		return 0;
