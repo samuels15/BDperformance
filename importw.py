@@ -28,8 +28,8 @@ def main():
 						+'\n0. Cancelar e sair.\n')
 	uiot = load_uiot(dataSetSize)
 	# uiot = load_uiot(100)
-	for item in uiot:
-		print repr(item)
+	#for item in uiot:
+	#	print repr(item)
 
 	if (str(opt)=='1'):
 		print ("Testando PostgreSQL...");
@@ -173,11 +173,9 @@ def main():
 			print ("Media global do uso de CPU: %.4f%%"   % (sum(cpu_avg)/len(cpu_avg)));
 	elif (str(opt)=='5'):
 		print ("Testando Couchbase...");
-		raw_input("CheckSegFault0. Enter...");
 		for i in range(5):
 			print ("\n"+"Teste no. "+str(i+1));
 			try:
-				raw_input("CheckSegFault1.Enter...");
 				couchbase_insert(uiot)
 			except:
 				print ("Couchbase: Erro na main.")
