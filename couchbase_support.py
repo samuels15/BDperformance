@@ -29,7 +29,23 @@ def couchbase_insert(registers):
 	except:
 		print "Erro no Couchbase.";
 
+def couchbase_select(query):
+	try:
+		cb = Bucket('couchbase://127.0.0.1/tg1',username='samuel', password='samuel');	 # conectando ao couchbase no localhost 127.0.0.1
+	except:
+		print "Couchbase: Erro de conexao ao Bucket.";
+		sys.exit(0)
+	try:
+		print query
+		start = time.time();
+		for row in cb.n1ql_query(query):
+			#print row
+			pass
+
+		end = time.time();
+		retorno.append(end-start)
+		return end-start
+	except:
+		print "Couchbase: Select falhou."
+
 retorno=[];
-
-
-
