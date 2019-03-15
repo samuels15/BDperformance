@@ -4,7 +4,7 @@ from postgres_insert import pg_insert, retorno as avg_pstg
 from influxdb_insert import influx_insert, retorno as avg_iflx
 from cassandra_insert import cassandra_insert, retorno as avg_cass
 from mongo_insert import mongo_insert, retorno as avg_mong
-from couchbase_support import couchbase_insert
+from couchbase_support import couchbase_insert, retorno as avg_couch
 from monitor import monitor, mem, cpu
 import threading
 import time
@@ -176,7 +176,7 @@ def main():
 		for i in range(5):
 			print ("\n"+"Teste no. "+str(i+1));
 			try:
-				t1=threading.Thread(target=couchbase_insert, args([uiot]));
+				t1=threading.Thread(target=couchbase_insert, args=([uiot]));
 				t2=threading.Thread(target=monitor, args=(["memcached"]));
 				t1.start();
 				t2.start();
