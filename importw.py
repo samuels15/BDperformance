@@ -177,7 +177,7 @@ def main():
 			print ("\n"+"Teste no. "+str(i+1));
 			try:
 				t1=threading.Thread(target=couchbase_insert, args=([uiot]));
-				t2=threading.Thread(target=monitor, args=(["memcached"]));
+				t2=threading.Thread(target=monitor, args=(["couchbase"]));
 				t1.start();
 				t2.start();
 				while t1.isAlive():
