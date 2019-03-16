@@ -1,0 +1,37 @@
+Testando Couchbase...
+SELECT parameters, COUNT(*) FROM tg1 GROUP BY parameters
+
+Teste no. 1
+SELECT parameters, COUNT(*) FROM tg1 GROUP BY parameters
+Tempo da consulta: 21.0162 segundos
+Media de memoria: 882894 KiB
+Uso medio da CPU: 28.4750%
+
+Teste no. 2
+SELECT parameters, COUNT(*) FROM tg1 GROUP BY parameters
+Tempo da consulta: 21.0739 segundos
+Media de memoria: 885261 KiB
+Uso medio da CPU: 23.1250%
+
+Teste no. 3
+SELECT parameters, COUNT(*) FROM tg1 GROUP BY parameters
+Tempo da consulta: 51.3733 segundos
+Media de memoria: 900501 KiB
+Uso medio da CPU: 42.7389%
+
+Teste no. 4
+SELECT parameters, COUNT(*) FROM tg1 GROUP BY parameters
+Tempo da consulta: 21.0618 segundos
+Media de memoria: 878654 KiB
+Uso medio da CPU: 26.0500%
+
+Teste no. 5
+SELECT parameters, COUNT(*) FROM tg1 GROUP BY parameters
+Tempo da consulta: 23.2078 segundos
+Media de memoria: 879794 KiB
+Uso medio da CPU: 23.1444%
+
+
+Media global do tempo: 27.5466 segundos
+Media global do uso de memoria: 885420
+Media global do uso de CPU: 28.7067%

@@ -2,31 +2,31 @@ Numero de registros: 100000
 Testando Couchbase...
 
 Teste no. 1
-Tempo da insercao: 43.4407 segundos
-Media de memoria: 326933 KiB
-Uso medio da CPU: 9.9840%
+Tempo da insercao: 82.4226 segundos
+Media de memoria: 817278 KiB
+Uso medio da CPU: 28.3812%
 
 Teste no. 2
-Tempo da insercao: 43.3712 segundos
-Media de memoria: 328281 KiB
-Uso medio da CPU: 9.9760%
+Tempo da insercao: 78.3344 segundos
+Media de memoria: 837042 KiB
+Uso medio da CPU: 22.3200%
 
 Teste no. 3
-Tempo da insercao: 44.5439 segundos
-Media de memoria: 328362 KiB
-Uso medio da CPU: 9.1736%
+Tempo da insercao: 77.8788 segundos
+Media de memoria: 864295 KiB
+Uso medio da CPU: 29.6900%
 
 Teste no. 4
-Tempo da insercao: 44.1016 segundos
-Media de memoria: 328494 KiB
-Uso medio da CPU: 9.4382%
+Tempo da insercao: 78.2605 segundos
+Media de memoria: 868358 KiB
+Uso medio da CPU: 30.6433%
 
 Teste no. 5
-Tempo da insercao: 45.1004 segundos
-Media de memoria: 329649 KiB
-Uso medio da CPU: 10.1803%
+Tempo da insercao: 74.8908 segundos
+Media de memoria: 879127 KiB
+Uso medio da CPU: 25.5483%
 
 
-Media global do tempo: 44.1116 segundos
-Media global do uso de memoria: 328343
-Media global do uso de CPU: 9.7504%
+Media global do tempo: 78.3574 segundos
+Media global do uso de memoria: 853220
+Media global do uso de CPU: 27.3166%
