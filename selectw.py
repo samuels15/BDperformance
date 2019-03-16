@@ -188,7 +188,7 @@ def main():
 			time.sleep(60)		# Pausa de um minuto antes da proxima bateria de testes
 		print ('\n');
 		if(avg_couch):
-			print ("Media global do tempo: %.4f segundos" % (sum(avg_cass)/len(avg_cass)));
+			print ("Media global do tempo: %.4f segundos" % (sum(avg_couch)/len(avg_couch)));
 		if mem_avg:
 			print ("Media global do uso de memoria: %.0f" % (sum(mem_avg)/len(mem_avg)));
 		if cpu_avg:
