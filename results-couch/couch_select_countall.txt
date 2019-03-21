@@ -1,0 +1,37 @@
+Testando Couchbase...
+SELECT COUNT(*) FROM tg1
+
+Teste no. 1
+SELECT COUNT(*) FROM tg1
+Tempo da consulta: 0.0152 segundos
+Media de memoria: 740072 KiB
+Uso medio da CPU: 0.0000%
+
+Teste no. 2
+SELECT COUNT(*) FROM tg1
+Tempo da consulta: 0.0151 segundos
+Media de memoria: 743676 KiB
+Uso medio da CPU: 0.0000%
+
+Teste no. 3
+SELECT COUNT(*) FROM tg1
+Tempo da consulta: 0.2804 segundos
+Media de memoria: 747912 KiB
+Uso medio da CPU: 8.6000%
+
+Teste no. 4
+SELECT COUNT(*) FROM tg1
+Tempo da consulta: 0.0159 segundos
+Media de memoria: 755896 KiB
+Uso medio da CPU: 0.0000%
+
+Teste no. 5
+SELECT COUNT(*) FROM tg1
+Tempo da consulta: 0.1789 segundos
+Media de memoria: 761384 KiB
+Uso medio da CPU: 9.0000%
+
+
+Media global do tempo: 0.1011 segundos
+Media global do uso de memoria: 749788
+Media global do uso de CPU: 3.5200%
